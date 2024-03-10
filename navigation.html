@@ -4,21 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"> 
+    <style>
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <nav>
         <div class="topnav">
-            <a class="active" href="/index.html">Наша Прича</a>
             <div class="dropdown">
-                <button class="dropbtn">Органи Школе</button>
+                <a class="active" href="/index.html">Наша Прича</a>
                 <div class="dropdown-content">
                     <a href="#">Link 1</a>
                     <a href="#">Link 2</a>
                     <a href="#">Link 3</a>
                 </div>
             </div>
-            <a href="/zaposleni">Запослени</a>
-            <a href="/galerija">Галерија</a>
+            <a href="/organiskole.html">Органи Школе</a>
+            <a href="/zaposleni.html">Запослени</a>
+            <a href="/galerija.html">Галерија</a>
         </div>
     </nav>
 </body>

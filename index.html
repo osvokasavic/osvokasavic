@@ -11,21 +11,18 @@
         <!-- Include navigation -->
         <div id="nav-placeholder"></div>
         <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                fetch('navigation.html')
-                    .then(response => response.text())
-                      .then(data => document.getElementById('nav-placeholder').innerHTML = data)
-                    .then(() => {
-                        // Code to initialize dropdown functionality
-                        var dropdowns = document.querySelectorAll('.dropdown');
-                        dropdowns.forEach(function(dropdown) {
-                            dropdown.addEventListener('mouseenter', function() {
-                                this.querySelector('.dropdown-content').style.display = 'block';
-                             });
-                            dropdown.addEventListener('mouseleave', function() {
-                                this.querySelector('.dropdown-content').style.display = 'none';
-                              });
-                        });
+            fetch('navigation.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('nav-placeholder').innerHTML = data);
+        </script>
+        <h1>h</h1>
+    </header>
+    <footer>
+        <p>&copy; 2024 Vojislav Voka Savić Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
                     });
             });
         </script>

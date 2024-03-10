@@ -8,15 +8,14 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="topnav">
-                <a class="active" href="#home">Наша Прича</a>
-                <a href="#news">Органи Школе</a>
-                <a href="#contact">Запослени</a>
-                <a href="#about">Галерија</a>
-            </div>
+        <!-- Include navigation -->
+        <div id="nav-placeholder"></div>
+        <script>
+            fetch('navigation.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('nav-placeholder').innerHTML = data);
+        </script>
         <h1>h</h1>
-        </nav>
     </header>
     <footer>
         <p>&copy; 2024 Vojislav Voka Savić Website. All rights reserved.</p>

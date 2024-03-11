@@ -3,56 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> 
-    <style>
-        /* Dropdown container */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        /* Dropdown content (hidden by default) */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            min-width: 160px;
-            top: 100%; /* Position dropdown below the link */
-            left: 0;
-        }
-
-        /* Links inside the dropdown */
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        /* Change color of dropdown links on hover */
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        /* Show the dropdown menu on hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-        <div class="topnav">
-            <div class="dropdown">
-                <a class="active" href="/index.html">Историјат</a>
-                <div class="dropdown-content">
-                    <a href="/1">Филм</a>
-                </div>
-            </div>
-        <a href="/organiskole">Органи Школе</a>
-        <a href="/zaposleni">Запослени</a>
-        <a href="/galerija">Галерија</a>
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
     </div>
-</body>
-</html>
+  </div>
+</div>

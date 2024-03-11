@@ -18,6 +18,11 @@ body {
   font-family: "Cuprum", sans-serif;
 }
 
+.naslov {
+  text-align: center;
+  font-family: "Cuprum", sans-serif;
+  font-size: 40
+}
 /* Add styling for active dropdown button */
 .dropdown.active .dropbtn {
     background-color: red;

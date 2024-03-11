@@ -1,4 +1,5 @@
 body {
+  font-family: 'Branding SF Cmp Semi Bold', sans-serif;
   background-color: #f0ecec;
   padding:20px
 }
@@ -77,6 +78,37 @@ body {
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
+}
+.animacija {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.text1, .text2, .text3 {
+    position: absolute;
+    left: -200px; /* Initial position outside the container */
+    top: 50px; /* Adjust as needed */
+    white-space: nowrap;
+    animation: slideText 10s linear infinite; /* Adjust animation duration as needed */
+}
+
+.text2 {
+    top: 100px; /* Adjust as needed */
+}
+
+.text3 {
+    top: 150px; /* Adjust as needed */
+}
+
+@keyframes slideText {
+    0% {
+        transform: translateX(-200px); /* Initial position outside the container */
+    }
+    100% {
+        transform: translateX(400px); /* Move 50px from initial position */
+    }
 }
 
 /* Show the dropdown menu on hover */

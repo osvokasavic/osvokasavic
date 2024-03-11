@@ -21,7 +21,7 @@ body {
 .naslov {
   text-align: center;
   font-family: "Cuprum", sans-serif;
-  font-size: 60px
+  font-size: 20px
 }
 /* Add styling for active dropdown button */
 .dropdown.active .dropbtn {

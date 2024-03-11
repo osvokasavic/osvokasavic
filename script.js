@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Get the current page URL
+    // Get the current page URLs
     var currentUrl = window.location.href;
 
     // Get all the navigation links

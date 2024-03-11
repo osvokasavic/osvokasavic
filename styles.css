@@ -1,5 +1,5 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #f0ecec;
   padding:20px
 }
@@ -14,7 +14,8 @@ body {
     background-color: red;
 }
 .centar {
-    text-align: center;
+  text-align: center;
+  font-family: "Cuprum", sans-serif;
 }
 
 /* Add styling for active dropdown button */

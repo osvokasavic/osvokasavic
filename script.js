@@ -9,7 +9,7 @@ var navbarLinks = document.querySelectorAll('.navbar a');
 // Loop through each link and check if it matches the current URL
 navbarLinks.forEach(function(link) {
     if (link.getAttribute('href') === currentUrl) {
-        // Add the "active" class to the link if it matches the current URL
+        // Add the "active" class to the link if it matches the current URL3
         link.classList.add('active');
     }
 });

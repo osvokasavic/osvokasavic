@@ -9,7 +9,7 @@ body {
   background-color: #333;
   font-family: "Cuprum", sans-serif;
 }
-/* Add styling for active link */
+/* Add styling for active links */
 .navbar a.active {
     background-color: red;
 }

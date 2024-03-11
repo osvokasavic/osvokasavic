@@ -1,4 +1,4 @@
-
+<script>
 document.addEventListener("DOMContentLoaded", function() {
     // Get the current page URL
     var currentUrl = window.location.href;
@@ -13,6 +13,24 @@ document.addEventListener("DOMContentLoaded", function() {
             // Add the "active" class to the matching link
             link.classList.add('active');
         }
+
+        // Check for dropdown menus
+        var dropdownContent = link.nextElementSibling;
+        if (dropdownContent && dropdownContent.classList.contains('dropdown-content')) {
+            // Get all dropdown links
+            var dropdownLinks = dropdownContent.querySelectorAll('a');
+            // Loop through dropdown links
+            dropdownLinks.forEach(function(dropdownLink) {
+                // Check if dropdown link's href matches the current URL
+                if (dropdownLink.href === currentUrl) {
+                    // Add the "active" class to the matching dropdown link
+                    dropdownLink.classList.add('active');
+                    // Add the "active" class to the parent dropdown button
+                    link.classList.add('active');
+                }
+            });
+        }
     });
 });
+</script>
 

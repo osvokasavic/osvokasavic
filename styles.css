@@ -4,7 +4,12 @@
   background-color: #333;
   font-family: Arial;
 }
-
+.header {
+  background-image: url('slike/skola.jpg'); /* Replace with your banner image */
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
 /* Links inside the navbars */
 .navbar a {
   float: left;

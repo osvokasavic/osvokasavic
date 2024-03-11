@@ -8,6 +8,9 @@
 .navbar a.active {
     background-color: red;
 }
+.centar {
+    text-align: center;
+}
 
 /* Add styling for active dropdown button */
 .dropdown.active .dropbtn {

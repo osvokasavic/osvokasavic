@@ -1,4 +1,3 @@
-<script>
 document.addEventListener("DOMContentLoaded", function() {
     // Get the current page URL
     var currentUrl = window.location.href;
@@ -32,5 +31,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-</script>
 

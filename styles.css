@@ -7,6 +7,7 @@ body {
 .navbar {
   position: fixed;
   top: 0; /* Set navbar to the top of the page */
+  z-index: 40;
   overflow: hidden;
   background-color: #333;
   font-family: "Cuprum", sans-serif;

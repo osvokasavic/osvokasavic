@@ -12,7 +12,7 @@ window.onload = function() {
         
         // Calculate the center coordinates of the banner image relative to the viewport
         var centerX = banner.offsetLeft + bannerWidth / 2;
-        var centerY = banner.offsetTop + bannerHeight / 2;
+        var centerY = banner.offsetTop + bannerHeight / 2 + (bannerHeight / 4); // Add a quarter of the height
         
         // Set the position of the naslov element to the calculated center coordinates
         naslov.style.left = centerX + 'px';
@@ -23,3 +23,4 @@ window.onload = function() {
     window.addEventListener('resize', setNaslovPosition);
     setNaslovPosition(); // Call initially
 };
+

@@ -1,7 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var image = document.getElementById("baner_skola");
-    var imageTop = image.offsetTop;
+    var image = document.getElementById("skola_baner");
     var naslov = document.querySelector(".naslov");
-    naslov.style.top = (imageTop / 2)+imageTop  + "px";
+    
+    // Check if the image is loaded
+    image.onload = function() {
+        var imageHeight = image.clientHeight;
+        var imageTop = image.offsetTop;
+        
+        // Adjust the position of the element
+        naslov.style.top = (imageTop + imageHeight / 2) + "px";
+    };
 });
-

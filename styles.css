@@ -5,6 +5,7 @@ body {
 }
 /* Navbar container s*/
 .navbar {
+  position: fixed;
   top: 0; /* Set navbar to the top of the page */
   overflow: hidden;
   background-color: #333;

@@ -1,18 +1,24 @@
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #f0ecec;
-  padding:20px
+  padding: 20px;
+  margin: 0; /* Add this to remove default margin */
 }
-/* Navbar container s*/
+
+/* Navbar container */
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: transparent; /* Make navbar transparent */
+  position: fixed; /* Fix navbar to the top */
+  width: 100%; /* Full width */
   font-family: "Cuprum", sans-serif;
 }
+
 /* Add styling for active link */
 .navbar a.active {
     background-color: red;
 }
+
 .centar {
   text-align: center;
   font-family: "Cuprum", sans-serif;
@@ -44,7 +50,7 @@ body {
   font-size: 16px;
   color: white;
   text-align: center;
-  padding: 14px;
+  padding: 14px 16px;
   text-decoration: none;
 }
 

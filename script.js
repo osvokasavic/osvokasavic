@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var image = document.getElementById("skola_baner");
+    var image = document.getElementById("baner_skola");
     var naslov = document.querySelector(".naslov");
     
     // Check if the image is loaded

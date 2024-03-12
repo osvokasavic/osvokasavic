@@ -3,19 +3,7 @@ body {
   background-color: #f0ecec;
   padding:20px
 }
-/* Navbar container s*/
-.navbar {
-  position: fixed;
-  top: 0; /* Set navbar to the top of the page */
-  z-index: 40;
-  overflow: hidden;
-  background-color: #333;
-  font-family: "Cuprum", sans-serif;
-}
-/* Add styling for active link */
-.navbar a.active {
-    background-color: red;
-}
+
 .centar {
   text-align: center;
   font-family: "Cuprum", sans-serif;
@@ -35,13 +23,15 @@ body {
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
 }
-
-/* Add styling for active dropdown button */
-.dropdown.active .dropbtn {
-    background-color: red;
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: "Cuprum", sans-serif;
+  z-index: 30;
 }
 
-/* Links inside the navbars */
+/* Links inside the navbar */
 .navbar a {
   float: left;
   font-size: 16px;
@@ -55,6 +45,7 @@ body {
 .dropdown {
   float: left;
   overflow: hidden;
+  font-family: "Cuprum", sans-serif;
 }
 
 /* Dropdown button */
@@ -65,6 +56,7 @@ body {
   color: white;
   padding: 14px 16px;
   background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
 }
 
@@ -78,10 +70,10 @@ body {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  /* Set width to match navbar width */
-  width: 100%; /* or width: 100vw; to cover the full viewport width */
+  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 2;
+  z-index: 40;
+  font-family: "Cuprum", sans-serif;
 }
 
 /* Links inside the dropdown */

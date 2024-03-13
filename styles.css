@@ -5,24 +5,29 @@ body {
   padding:10px
 }
 
+.instagram {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
 .space {
-    white-space: pre;
-    display: flex;
-    padding-right: 300px;
-    padding-left: 300px;
-    padding-top: 10px;
-    margin: 0px;
-    justify-content: space-between;
+  white-space: pre;
+  display: flex;
+  padding-right: 300px;
+  padding-left: 300px;
+  padding-top: 10px;
+  margin: 0px;
+  justify-content: space-between;
 }
 
 .right {
-    text-align: center;
-    flex-basis: 50%;
+  text-align: center;
+  flex-basis: 50%;
 }
 
 .left {
-    text-align: center;
-    flex-basis: 50%;
+  text-align: center;
+  flex-basis: 50%;
 }
 
 h4 {

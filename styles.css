@@ -22,7 +22,7 @@ body {
 }
 
 .right {
-  text-align: right;
+  text-align: left;
   flex-basis: 50%;
 }
 

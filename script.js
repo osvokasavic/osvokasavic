@@ -1,26 +1,26 @@
 window.onload = function() {
-    // Get the banner image
+    // Узети банер
     var banner = document.querySelector('.banner');
-    // Get the naslov element
+    // Узети наслов елемент
     var naslov = document.querySelector('.naslov');
     
-    // Function to calculate and set the position of the naslov element
+    // Функција за калкулисање локацију наслова
     function setNaslovPosition() {
-        // Get the width and height of the banner image
+        // Узети висину и ширину
         var bannerWidth = banner.offsetWidth;
         var bannerHeight = banner.offsetHeight;
         
-        // Calculate the center coordinates of the banner image relative to the viewport
+        // Калкулисати позицију
         var centerX = banner.offsetLeft + bannerWidth / 2;
-        var centerY = banner.offsetTop + bannerHeight / 2 - (bannerHeight / 4); // Add a quarter of the height
+        var centerY = banner.offsetTop + bannerHeight / 2 - (bannerHeight / 4);
         
-        // Set the position of the naslov element to the calculated center coordinates
+        // Поставити наслов на координате
         naslov.style.left = centerX + 'px';
         naslov.style.top = centerY + 'px';
     }
     
-    // Call the setNaslovPosition function when the window is resized (in case the image size changes) and initially
+    // Када је прозору промењена величина позваће функцију setNaslovPosition
     window.addEventListener('resize', setNaslovPosition);
-    setNaslovPosition(); // Call initially
+    setNaslovPosition(); // Позвати
 };
 

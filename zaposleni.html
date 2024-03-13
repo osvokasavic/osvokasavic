@@ -10,9 +10,16 @@
     .space {
         white-space: pre;
         display: flex;
+        padding-right: 300px;
+        padding-left: 300px;
+        padding-top: 10px;
         justify-content: space-between;
     }
-    .right, .left {
+    .right {
+        text-align: center;
+        flex-basis: 50%;
+    }
+    .left {
         text-align: center;
         flex-basis: 50%;
     }
@@ -20,7 +27,7 @@
 </head>
 <body>
     <header>
-        <!-- Include navigation -->
+        <!-- Include navigation yesnt -->
         <div id="nav-placeholder"></div>
         <script>
             fetch('navigation.html')
@@ -31,9 +38,9 @@
             <h1><b>Запослени</b></h1>
         </div>
         <div class="space">
-            <div class="left">
-                <h3>Разредну наставу изводе:</h3>
-                
+        <div class="left">
+            <h3>Разредну наставу изводе:</h3>
+            
             <h4>I разред</h4>
             Јасмина Радовановић I-1
             Слободанка Павић I-2
@@ -81,8 +88,10 @@
             Сања Живановић
             Веснa Ранђеловић
     
-            </div>
-            <div class="right">
+            <h4>Музичка култура</h4>
+        </div>
+        <div class="right">
+
             <h4>II разред</h4>
             Татјана Ђурђевић II-1
             Љиљана Милановић II-2
@@ -130,10 +139,13 @@
             Бојан Лазов
             Владимир Петровић
     
-            </div>
+            <h4>Техника и технологија</h4>
+        </div>
         </div>
     </header>
     <footer>
+        
     </footer>
 </body>
 </html>
+

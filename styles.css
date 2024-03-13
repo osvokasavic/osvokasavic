@@ -25,6 +25,10 @@ body {
     flex-basis: 50%;
 }
 
+h4 {
+  margin:0;
+}
+
 .centar {
   text-align: center;
   font-family: "Cuprum", sans-serif;

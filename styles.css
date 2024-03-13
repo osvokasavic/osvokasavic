@@ -10,6 +10,7 @@ body {
   top: 8px;
   left: 16px;
 }
+
 .space {
   white-space: pre;
   display: flex;
@@ -21,12 +22,12 @@ body {
 }
 
 .right {
-  text-align: center;
+  text-align: right;
   flex-basis: 50%;
 }
 
 .left {
-  text-align: center;
+  text-align: left;
   flex-basis: 50%;
 }
 

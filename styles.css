@@ -6,6 +6,10 @@ body {
   max-age: 0;
 }
 
+.VokaSavic {
+  height: 292;
+  width: 198;
+}
 .instagram {
   position: absolute;
   top: 8px;

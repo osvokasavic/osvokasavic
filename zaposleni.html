@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ОШ "Војислав Вока Савић" Запослени</title>
+    <!-- Увести css -->
     <link rel="stylesheet" href="styles.css"> 
     <meta name="description" content="Zaposleni Osnovne škole 'Vojislav Voka Savić'">
 </head>
 <body>
     <header>
-        <!-- Include navigation yesnt -->
+        <!-- Навигација -->
         <div id="nav-placeholder"></div>
         <script>
             fetch('navigation.html')
                 .then(response => response.text())
                 .then(data => document.getElementById('nav-placeholder').innerHTML = data);
         </script>
+        <!-- Наслов -->
         <div class="centar">
             <h1><b>Запослени</b></h1>
         </div>
+        <!-- Листа запослених -->
         <div class="space">
         <div class="left">
             <h3>Разредну наставу изводе:</h3>

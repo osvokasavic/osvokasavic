@@ -36,6 +36,9 @@ h4 {
   margin:0;
 }
 
+.banner {
+  padding-left:0;
+  padding-right:0;
 .centar {
   text-align: center;
   font-family: "Cuprum", sans-serif;
@@ -91,8 +94,6 @@ h4 {
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 /* Црвена позадина линкова */

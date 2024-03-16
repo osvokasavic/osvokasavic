@@ -5,10 +5,10 @@ body {
   max-age: 1;
 }
 
-.instagram {
+.logo {
   position: absolute;
   top: 8px;
-  left: 8px;
+  right: 8px;
 }
 
 .space {

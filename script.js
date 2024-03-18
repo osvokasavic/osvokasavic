@@ -40,22 +40,3 @@ function scrollToTop() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Function to add "active" class to the current page's link
-    function setActiveLink() {
-        var links = document.querySelectorAll('.navbar a');
-        var currentPath = window.location.pathname;
-
-        links.forEach(function(link) {
-            if (link.getAttribute('href') === currentPath) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-    }
-
-    // Call the setActiveLink function when the DOM content is loaded
-    setActiveLink();
-});
-

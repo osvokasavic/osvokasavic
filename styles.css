@@ -1,3 +1,22 @@
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 32px;
+  background-color: #888; /* Gray-ish color */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #666; /* Darker gray on hover */
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #f0ecec;
@@ -72,6 +91,10 @@ h4 {
   padding-right:0;
 }
 
+.navbar .icon {
+  display: none;
+}
+
 /* Links inside the navbar */
 .navbar a {
   float: left;
@@ -136,22 +159,35 @@ h4 {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-#scrollToTopBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 32px;
-  background-color: #888; /* Gray-ish color */
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar.responsive .dropdown {float: none;}
+  .navbar.responsive .dropdown-content {position: relative;}
+  .navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
 }
 
-#scrollToTopBtn:hover {
-  background-color: #666; /* Darker gray on hover */
-}
 

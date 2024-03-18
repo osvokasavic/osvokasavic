@@ -28,7 +28,7 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   var scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+  if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
     scrollToTopBtn.style.display = "block";
   } else {
     scrollToTopBtn.style.display = "none";

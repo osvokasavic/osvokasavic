@@ -85,7 +85,7 @@ h4 {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
 }
 /* Навигација */
-.navbar {
+.navbar .galerijanav{
   overflow: hidden;
   background-color: #333;
   font-family: "Cuprum", sans-serif;
@@ -100,7 +100,7 @@ h4 {
 }
 
 /* Links inside the navbar */
-.navbar a {
+.navbar a .galerijanav a {
   float: left;
   font-size: 16px;
   color: white;
@@ -129,7 +129,7 @@ h4 {
 }
 
 /* Црвена позадина линкова */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover .dropbtn .galerijanav a:hover{
   background-color: red;
 }
 
@@ -192,28 +192,4 @@ h4 {
     width: 100%;
     text-align: left;
   }
-}
-
-.galerijanav {
-  overflow: hidden;
-  background-color: #333;
-  font-family: "Cuprum", sans-serif;
-  padding-left: 20px;
-  z-index: 30;
-  padding-left:0;
-  padding-right:0;
-}
-
-/* Links inside the navbar */
-.galerijanav a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.galerijanav a:hover {
-  background-color: red;
 }

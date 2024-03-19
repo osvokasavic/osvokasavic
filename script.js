@@ -4,24 +4,26 @@ window.onload = function() {
     // Узети наслов елемент
     var naslov = document.querySelector('.naslov');
     
-    // Функција за калкулисање локацију наслова
-    function setNaslovPosition() {
-        // Узети висину и ширину
-        var bannerWidth = banner.offsetWidth;
-        var bannerHeight = banner.offsetHeight;
-        
-        // Калкулисати позицију
-        var centerX = banner.offsetLeft + bannerWidth / 2;
-        var centerY = banner.offsetTop + bannerHeight / 2 - (bannerHeight / 4);
-        
-        // Поставити наслов на координате
-        naslov.style.left = centerX + 'px';
-        naslov.style.top = centerY + 'px';
+    if (banner && naslov) {
+        // Function to calculate the position of the title
+        function setNaslovPosition() {
+            // Get the width and height
+            var bannerWidth = banner.offsetWidth;
+            var bannerHeight = banner.offsetHeight;
+
+            // Calculate the position
+            var centerX = banner.offsetLeft + bannerWidth / 2;
+            var centerY = banner.offsetTop + bannerHeight / 2 - (bannerHeight / 4);
+
+            // Set the title at the coordinates
+            naslov.style.left = centerX + 'px';
+            naslov.style.top = centerY + 'px';
+        }
+
+        // Call the setNaslovPosition function when the window is resized
+        window.addEventListener('resize', setNaslovPosition);
+        setNaslovPosition(); // Call it initially
     }
-    
-    // Када је прозору промењена величина позваће функцију setNaslovPosition
-    window.addEventListener('resize', setNaslovPosition);
-    setNaslovPosition(); // Позвати
 };
 window.onscroll = function() {
     scrollFunction();

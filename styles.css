@@ -17,6 +17,10 @@
   background-color: #666; /* Darker gray on hover */
 }
 
+.notvisible {
+  display: none;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #f0ecec;

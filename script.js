@@ -23,22 +23,29 @@ window.onload = function() {
     window.addEventListener('resize', setNaslovPosition);
     setNaslovPosition(); // Позвати
 };
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {
+    scrollFunction();
+};
 
 function scrollFunction() {
-  var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    // Check if the div with id "scrollToTopBtn" exists
+    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-  if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-    scrollToTopBtn.style.display = "block";
-  } else {
-    scrollToTopBtn.style.display = "none";
-  }
+    // If scrollToTopBtn exists, proceed with the scroll functionality
+    if (scrollToTopBtn) {
+        if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    }
 }
 
 function scrollToTop() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
 
 function myFunction() {
   var x = document.getElementById("navbar");

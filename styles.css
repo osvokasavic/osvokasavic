@@ -194,4 +194,26 @@ h4 {
   }
 }
 
+.galerijanav {
+  overflow: hidden;
+  background-color: #333;
+  font-family: "Cuprum", sans-serif;
+  padding-left: 20px;
+  z-index: 30;
+  padding-left:0;
+  padding-right:0;
+}
 
+/* Links inside the navbar */
+.galerijanav a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.galerijanav a:hover {
+  background-color: red;
+}

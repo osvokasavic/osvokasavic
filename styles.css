@@ -85,7 +85,7 @@ h4 {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
 }
 /* Навигација */
-.navbar .galerijanav{
+.navbar .galerijanav {
   overflow: hidden;
   background-color: #333;
   font-family: "Cuprum", sans-serif;

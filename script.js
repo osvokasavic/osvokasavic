@@ -51,10 +51,22 @@ function scrollToTop() {
 
 function meni() {
   var x = document.getElementById("navbar");
+  var overlay = document.getElementById("overlay");
   if (x.className === "navbar") {
     x.className += " responsive";
+    overlay.style.display = "block"; // Show the overlay
   } else {
     x.className = "navbar";
+    overlay.style.display = "none"; // Hide the overlay
   }
-setNaslovPosition();
+}
+
+// Function to close the menu when clicking outside of it
+function closeMenu() {
+    var x = document.getElementById("navbar");
+    var overlay = document.getElementById("overlay");
+    if (x.className === "navbar responsive") {
+        x.className = "navbar";
+        overlay.style.display = "none"; // Hide the overlay
+    }
 }

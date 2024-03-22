@@ -11,7 +11,7 @@ window.onload = function() {
             var bannerWidth = banner.offsetWidth;
             var bannerHeight = banner.offsetHeight;
 
-            // Calculate the position
+            // Calculate the position ;
             var centerX = banner.offsetLeft + bannerWidth / 2;
             var centerY = banner.offsetTop + bannerHeight / 2 - (bannerHeight / 4);
 

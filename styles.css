@@ -220,10 +220,8 @@ h4 {
   background-color: red;
 }
 
-/* Add this new CSS code at the bottom of your existing CSS file */
-
 /* Style for overlay dropdown content */
-.overlay .overlay-content {
+.overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -235,8 +233,8 @@ h4 {
     overflow: auto;
 }
 
-/* Show overlay content */
-.overlay.active .overlay-content {
+/* Show overlay when active */
+.overlay.active {
     display: block;
 }
 
@@ -253,3 +251,4 @@ h4 {
 .overlay .overlay-content a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+

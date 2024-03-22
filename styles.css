@@ -222,43 +222,47 @@ h4 {
 
 /* Add this new CSS code at the bottom of your existing CSS file */
 
-/* Mobile menu overlay */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    z-index: 100; /* Ensure it's above other content */
+/* Style for overlay dropdowns */
+.overlay .dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-/* Mobile menu overlay content */
-.overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-/* Style for overlay links */
-.overlay-content a {
-    display: block;
-    font-size: 20px;
+/* Style for overlay dropdown buttons */
+.overlay .dropdown .dropbtn {
+    background-color: transparent;
     color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
     padding: 10px 0;
     text-decoration: none;
+}
+
+/* Style for overlay dropdown content */
+.overlay .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    min-width: 200px;
+    z-index: 1;
+}
+
+/* Style for overlay dropdown links */
+.overlay .dropdown-content a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
     transition: 0.3s;
 }
 
-/* Hover effect for overlay links */
-.overlay-content a:hover {
+/* Hover effect for overlay dropdown links */
+.overlay .dropdown-content a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Show the overlay when the mobile menu is open */
-.navbar.responsive + .overlay {
+/* Show dropdown content when hovering over dropdown button */
+.overlay .dropdown:hover .dropdown-content {
     display: block;
 }

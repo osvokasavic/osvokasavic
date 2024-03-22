@@ -264,7 +264,15 @@ h4 {
     border-radius: 5px;
     z-index: 1001;
 }
+/* CSS for Dropdown */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
+/* Hide the dropdown content by default */
+.dropdown-content {
+    display: none;
+}
 .overlay-content .dropdown:hover .dropdown-content {
     display: block;
 }

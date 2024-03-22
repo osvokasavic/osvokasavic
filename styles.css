@@ -1,7 +1,4 @@
-.spacen {
-  white-space: pre;
-  margin: 0px;
-}
+
 
 #scrollToTopBtn {
   display: none;
@@ -31,6 +28,8 @@ body {
   background-color: #f0ecec;
   padding:10px;
   max-age: 1;
+  white-space: pre;
+  margin: 0px;
 }
 
 .logo {

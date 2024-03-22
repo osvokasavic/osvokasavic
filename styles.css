@@ -1,3 +1,7 @@
+.spacen {
+  white-space: pre;
+}
+
 #scrollToTopBtn {
   display: none;
   position: fixed;

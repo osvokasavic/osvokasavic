@@ -222,34 +222,26 @@ h4 {
 
 /* Add this new CSS code at the bottom of your existing CSS file */
 
-/* Style for overlay dropdowns */
-.overlay .dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Style for overlay dropdown buttons */
-.overlay .dropdown .dropbtn {
-    background-color: transparent;
-    color: white;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
-    padding: 10px 0;
-    text-decoration: none;
-}
-
 /* Style for overlay dropdown content */
-.overlay .dropdown-content {
+.overlay .overlay-content {
     display: none;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    min-width: 200px;
-    z-index: 1;
+    z-index: 2;
+    overflow: auto;
+}
+
+/* Show overlay content */
+.overlay.active .overlay-content {
+    display: block;
 }
 
 /* Style for overlay dropdown links */
-.overlay .dropdown-content a {
+.overlay .overlay-content a {
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -258,11 +250,6 @@ h4 {
 }
 
 /* Hover effect for overlay dropdown links */
-.overlay .dropdown-content a:hover {
+.overlay .overlay-content a:hover {
     background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Show dropdown content when hovering over dropdown button */
-.overlay .dropdown:hover .dropdown-content {
-    display: block;
 }

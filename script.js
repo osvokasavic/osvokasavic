@@ -49,38 +49,13 @@ function scrollToTop() {
 }
 
 
-function closeMenu() {
-  var x = document.getElementById("navbar");
-  var overlay = document.getElementById("overlay");
-  if (x.className === "navbar responsive") {
-    x.className = "navbar";
-    overlay.classList.remove("active"); // Remove the "active" class from overlay
-    // Remove the "active" class from buttons
-    var buttons = document.getElementsByClassName("navbar a");
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].classList.remove("active");
-    }
-  }
+function toggleNav() {
+    var overlay = document.getElementById('overlay');
+    overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
 
-function meni() {
-  var x = document.getElementById("navbar");
-  var overlay = document.getElementById("overlay");
-  if (x.className === "navbar") {
-    x.className += " responsive";
-    overlay.classList.add("active"); // Add the "active" class to show the overlay
-    // Add the "active" class to buttons
-    var buttons = document.getElementsByClassName("navbar a");
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].classList.add("active");
-    }
-  } else {
-    x.className = "navbar";
-    overlay.classList.remove("active"); // Remove the "active" class from overlay
-    // Remove the "active" class from buttons
-    var buttons = document.getElementsByClassName("navbar a");
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].classList.remove("active");
-    }
-  }
+// Function to handle dropdown menu visibility
+function toggleDropdown(dropdown) {
+    var content = dropdown.nextElementSibling;
+    content.style.display = content.style.display === "block" ? "none" : "block";
 }

@@ -65,9 +65,10 @@ function meni() {
     var overlay = document.getElementById("overlay");
     if (x.className === "navbar") {
         x.className += " responsive";
-        overlay.classList.add("active"); // Add the "active" class
+        overlay.classList.add("active"); // Add the "active" class to show the overlay
     } else {
         x.className = "navbar";
-        overlay.classList.remove("active"); // Remove the "active" class
+        overlay.classList.remove("active"); // Remove the "active" class to hide the overlay
     }
 }
+

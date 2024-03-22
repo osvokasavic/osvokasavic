@@ -1,5 +1,3 @@
-
-
 #scrollToTopBtn {
   display: none;
   position: fixed;
@@ -28,7 +26,6 @@ body {
   background-color: #f0ecec;
   padding:10px;
   max-age: 1;
-  white-space: pre;
   margin: 0px;
 }
 

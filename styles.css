@@ -244,6 +244,7 @@ h4 {
     border-radius: 5px;
     padding: 20px;
     z-index: 1000;
+    font-family: "Cuprum", sans-serif;
 }
 .overlay-content a {
     display: block;
@@ -251,32 +252,3 @@ h4 {
     text-decoration: none;
     margin-bottom: 10px;
 }
-
-.overlay-content .dropdown {
-    position: relative;
-}
-
-.overlay-content .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    z-index: 1001;
-}
-/* CSS for Dropdown */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Hide the dropdown content by default */
-.dropdown-content {
-    display: none;
-}
-.overlay-content .dropdown:hover .dropdown-content {
-    display: block;
-}
-

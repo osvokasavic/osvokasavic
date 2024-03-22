@@ -49,24 +49,25 @@ function scrollToTop() {
 }
 
 
-function meni() {
-  var x = document.getElementById("navbar");
-  var overlay = document.getElementById("overlay");
-  if (x.className === "navbar") {
-    x.className += " responsive";
-    overlay.style.display = "block"; // Show the overlay
-  } else {
-    x.className = "navbar";
-    overlay.style.display = "none"; // Hide the overlay
-  }
-}
-
-// Function to close the menu when clicking outside of it
+// Modify the closeMenu() function to remove the "active" class from overlay
 function closeMenu() {
     var x = document.getElementById("navbar");
     var overlay = document.getElementById("overlay");
     if (x.className === "navbar responsive") {
         x.className = "navbar";
-        overlay.style.display = "none"; // Hide the overlay
+        overlay.classList.remove("active"); // Remove the "active" class
+    }
+}
+
+// Add a line to toggle the "active" class on the overlay in the meni() function
+function meni() {
+    var x = document.getElementById("navbar");
+    var overlay = document.getElementById("overlay");
+    if (x.className === "navbar") {
+        x.className += " responsive";
+        overlay.classList.add("active"); // Add the "active" class
+    } else {
+        x.className = "navbar";
+        overlay.classList.remove("active"); // Remove the "active" class
     }
 }

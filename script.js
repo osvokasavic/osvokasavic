@@ -55,7 +55,8 @@ function toggleNav() {
 }
 
 // Function to handle dropdown menu visibility
-function toggleDropdown(dropdown) {
-    var content = dropdown.nextElementSibling;
+function toggleDropdown(button) {
+    var content = button.nextElementSibling;
     content.style.display = content.style.display === "block" ? "none" : "block";
 }
+

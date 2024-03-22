@@ -49,26 +49,38 @@ function scrollToTop() {
 }
 
 
-// Modify the closeMenu() function to remove the "active" class from overlay
 function closeMenu() {
-    var x = document.getElementById("navbar");
-    var overlay = document.getElementById("overlay");
-    if (x.className === "navbar responsive") {
-        x.className = "navbar";
-        overlay.classList.remove("active"); // Remove the "active" class
+  var x = document.getElementById("navbar");
+  var overlay = document.getElementById("overlay");
+  if (x.className === "navbar responsive") {
+    x.className = "navbar";
+    overlay.classList.remove("active"); // Remove the "active" class from overlay
+    // Remove the "active" class from buttons
+    var buttons = document.getElementsByClassName("navbar a");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove("active");
     }
+  }
 }
 
-// Add a line to toggle the "active" class on the overlay in the meni() function
 function meni() {
-    var x = document.getElementById("navbar");
-    var overlay = document.getElementById("overlay");
-    if (x.className === "navbar") {
-        x.className += " responsive";
-        overlay.classList.add("active"); // Add the "active" class to show the overlay
-    } else {
-        x.className = "navbar";
-        overlay.classList.remove("active"); // Remove the "active" class to hide the overlay
+  var x = document.getElementById("navbar");
+  var overlay = document.getElementById("overlay");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+    overlay.classList.add("active"); // Add the "active" class to show the overlay
+    // Add the "active" class to buttons
+    var buttons = document.getElementsByClassName("navbar a");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].classList.add("active");
     }
+  } else {
+    x.className = "navbar";
+    overlay.classList.remove("active"); // Remove the "active" class from overlay
+    // Remove the "active" class from buttons
+    var buttons = document.getElementsByClassName("navbar a");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove("active");
+    }
+  }
 }
-

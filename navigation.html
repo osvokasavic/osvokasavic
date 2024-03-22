@@ -6,145 +6,107 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Cuprum фонт -->
+    <!-- Cuprum font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <!-- Montserrat фонт-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- "Почетна" страница -->
 <div class="navbar" id="navbar">
     <a href="/index.html">Почетна</a>
-    <!-- Спуштајући мени за "Наша Прича"-->
     <div class="dropdown">
         <button class="dropbtn">Наша Прича
             <i class="fas fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <!-- Спуштајући линкови за "Наша Прича" -->
             <a href="/istorijat.html">Историјат</a>
             <a href="/film.html">Филм о школи</a>
         </div>
     </div>
-    <!-- "Органи Школе" страница -->
     <a href="/organi.html">Органи Школе</a>
-    <!-- "Запослени" страница-->
     <a href="/zaposleni.html">Запослени</a>
-    <!-- "Галерија" страница -->
     <a href="/galerija.html">Галерија</a>
-    <!-- Спуштајући мени за "Активности" -->
     <div class="dropdown">
         <button class="dropbtn">Активности
             <i class="fas fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <!-- Спуштајући линкови за "Активност" -->
             <a href="/takmicenja.html">Такмичења</a>
             <a href="/ekskurzije.html">Екскурзије</a>
             <a href="/sekcije.html">Секције</a>
             <a href="/zanastavnike.html">За Наставнике</a>
         </div>
     </div>
-    <!-- Спуштајући мени за "Стручно особље" -->
     <div class="dropdown">
         <button class="dropbtn">Стручно особље
             <i class="fas fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <!-- Спуштајући линкови за "Стручно особље" -->
             <a href="/psiholog.html">Психолог и педагог</a>
             <a href="/biblioteka.html">Библиотека</a>
         </div>
     </div>
-    <!-- Спуштајући мени за "Ђачка страна"-->
     <div class="dropdown">
         <button class="dropbtn">Ђачка страна
             <i class="fas fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <!-- Спуштајући линкови за "Ђачка страна" -->
             <a href="/bezbednost.html">Безбедност на интернету</a>
             <a href="/zavrsni.html">Завршни испит</a>
             <a href="/kalendar.html">Школски календар</a>
             <a href="/razno.html">Разно...</a>
         </div>
     </div>
-    <a href="javascript:void(0);" class="icon" onclick="meni()">&#9776;</a>
-    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
-    <!-- Страница "Архива" -->
-    <a href="/arhiva.html">Архива</a>
-    <!-- Страница "Контакт" -->
-    <a href="/kontakt.html">Контакт</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
 </div> 
-<div class="overlay" id="overlay" onclick="closeMenu()">
+<div id="overlay" class="overlay" onclick="toggleNav()">
     <div class="overlay-content">
-    <a href="/index.html">Почетна</a>
-    <!-- Спуштајући мени за "Наша Прича"-->
-    <div class="dropdown">
-        <button class="dropbtn">Наша Прича
-            <i class="fas fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <!-- Спуштајући линкови за "Наша Прича" -->
-            <a href="/istorijat.html">Историјат</a>
-            <a href="/film.html">Филм о школи</a>
+        <a href="/index.html">Почетна</a>
+        <div class="dropdown">
+            <button class="dropbtn">Наша Прича
+                <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/istorijat.html">Историјат</a>
+                <a href="/film.html">Филм о школи</a>
+            </div>
         </div>
-    </div>
-    <!-- "Органи Школе" страница -->
-    <a href="/organi.html">Органи Школе</a>
-    <!-- "Запослени" страница-->
-    <a href="/zaposleni.html">Запослени</a>
-    <!-- "Галерија" страница -->
-    <a href="/galerija.html">Галерија</a>
-    <!-- Спуштајући мени за "Активности" -->
-    <div class="dropdown">
-        <button class="dropbtn">Активности
-            <i class="fas fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <!-- Спуштајући линкови за "Активност" -->
-            <a href="/takmicenja.html">Такмичења</a>
-            <a href="/ekskurzije.html">Екскурзије</a>
-            <a href="/sekcije.html">Секције</a>
-            <a href="/zanastavnike.html">За Наставнике</a>
+        <a href="/organi.html">Органи Школе</a>
+        <a href="/zaposleni.html">Запослени</a>
+        <a href="/galerija.html">Галерија</a>
+        <div class="dropdown">
+            <button class="dropbtn">Активности
+                <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/takmicenja.html">Такмичења</a>
+                <a href="/ekskurzije.html">Екскурзије</a>
+                <a href="/sekcije.html">Секције</a>
+                <a href="/zanastavnike.html">За Наставнике</a>
+            </div>
         </div>
-    </div>
-    <!-- Спуштајући мени за "Стручно особље" -->
-    <div class="dropdown">
-        <button class="dropbtn">Стручно особље
-            <i class="fas fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <!-- Спуштајући линкови за "Стручно особље" -->
-            <a href="/psiholog.html">Психолог и педагог</a>
-            <a href="/biblioteka.html">Библиотека</a>
+        <div class="dropdown">
+            <button class="dropbtn">Стручно особље
+                <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/psiholog.html">Психолог и педагог</a>
+                <a href="/biblioteka.html">Библиотека</a>
+            </div>
         </div>
-    </div>
-    <!-- Спуштајући мени за "Ђачка страна"-->
-    <div class="dropdown">
-        <button class="dropbtn">Ђачка страна
-            <i class="fas fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <!-- Спуштајући линкови за "Ђачка страна" -->
-            <a href="/bezbednost.html">Безбедност на интернету</a>
-            <a href="/zavrsni.html">Завршни испит</a>
-            <a href="/kalendar.html">Школски календар</a>
-            <a href="/razno.html">Разно...</a>
+        <div class="dropdown">
+            <button class="dropbtn">Ђачка страна
+                <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/bezbednost.html">Безбедност на интернету</a>
+                <a href="/zavrsni.html">Завршни испит</a>
+                <a href="/kalendar.html">Школски календар</a>
+                <a href="/razno.html">Разно...</a>
+            </div>
         </div>
-    </div>
-    <a href="javascript:void(0);" class="icon" onclick="meni()">&#9776;</a>
-    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
-    <!-- Страница "Архива" -->
-    <a href="/arhiva.html">Архива</a>
-    <!-- Страница "Контакт" -->
-    <a href="/kontakt.html">Контакт</a>
-</div> 
-<!-- <img alt="Лого" border="0" src="slike/logo.webp" usemap="#Map2" class="logo"> t-->
+    </div> 
+</div>
+<script src="script.js"></script>
 </body>
 </html>
-

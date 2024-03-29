@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОШ "Војислав Вока Савић"</title>
+    <!-- Увести css -->
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <!-- Навигација -->
+        <div id="nav-placeholder"></div>
+        <script>
+            fetch('navigation.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('nav-placeholder').innerHTML = data);
+        </script>
+	<!-- Наслов -->
+        <div class="centar">
+            <h1><b>Такмичења</b></h1>
+        </div>
+      <h4>Погледајте:</h4>
+      <p><a href="/arhiva/takmicenja-2022-2023">Такмичења у школској 2022/2023. години</a></p>
+      <p><a href="/arhiva/takmicenja-2021-2022">Такмичења у школској 2021/2022. години</a></p>
+      <p><a href="/arhiva/takmicenja-2020-2021">Такмичења у школској 2020/2021. години</a></p>
+      <p><a href="/arhiva/takmicenja-2019-2020">Такмичења у школској 2019/2020. години</a></p>
+      <p><a href="/arhiva/takmicenja-2018-2019">Такмичења у школској 2018/2019. години</a></p>
+      <p><a href="/arhiva/takmicenja-2017-2018">Такмичења у школској 2017/2018. години</a></p>
+      <p><a href="/arhiva/takmicenja-2016-2017">Такмичења у школској 2016/2017. години</a></p>
+      <p><a href="/arhiva/takmicenja-2015-2016">Такмичења у школској 2015/2016. години</a></p>
+      <p><a href="/arhiva/takmicenja-2014-2015">Такмичења у школској 2014/2015. години</a></p>
+      <p><a href="/arhiva/takmicenja-2013-2014">Такмичења у школској 2013/2014. години</a></p>
+    </header>
+    <footer>
+        <p></p>
+    </footer>
+</body>
+</html>

@@ -1,7 +1,23 @@
 window.onload = function() {
-    // Узети банер
-    var banner = document.querySelector('.banner, .banner_f');
-    // Узети наслов елемент
+    // Get the computed style of .banner
+    var bannerStyle = window.getComputedStyle(document.querySelector('.banner'));
+    // Get the computed style of .banner_f
+    var bannerFStyle = window.getComputedStyle(document.querySelector('.banner_f'));
+
+    // Check if .banner is displayed
+    var bannerDisplayed = bannerStyle.getPropertyValue('display') !== 'none';
+    // Check if .banner_f is displayed
+    var bannerFDisplayed = bannerFStyle.getPropertyValue('display') !== 'none';
+
+    // Select the appropriate banner based on display
+    var banner;
+    if (bannerDisplayed) {
+        banner = document.querySelector('.banner');
+    } else if (bannerFDisplayed) {
+        banner = document.querySelector('.banner_f');
+    }
+
+    // Get the title element
     var naslov = document.querySelector('.naslov');
     
     if (banner && naslov) {

@@ -1,20 +1,13 @@
 window.onload = function() {
-    // Get the computed style of .banner
-    var bannerStyle = window.getComputedStyle(document.querySelector('.banner'));
-    // Get the computed style of .banner_f
-    var bannerFStyle = window.getComputedStyle(document.querySelector('.banner_f'));
+    // Check screen width
+    var screenWidth = window.innerWidth;
 
-    // Check if .banner is displayed
-    var bannerDisplayed = bannerStyle.getPropertyValue('display') !== 'none';
-    // Check if .banner_f is displayed
-    var bannerFDisplayed = bannerFStyle.getPropertyValue('display') !== 'none';
-
-    // Select the appropriate banner based on display
+    // Select banner class based on screen width
     var banner;
-    if (bannerDisplayed) {
-        banner = document.querySelector('.banner');
-    } else if (bannerFDisplayed) {
+    if (screenWidth < 600) {
         banner = document.querySelector('.banner_f');
+    } else {
+        banner = document.querySelector('.banner');
     }
 
     // Get the title element
@@ -41,6 +34,7 @@ window.onload = function() {
         setNaslovPosition(); // Call it initially
     }
 };
+
 window.onscroll = function() {
     scrollFunction();
 };

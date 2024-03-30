@@ -76,20 +76,27 @@ function scrollToTop() {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
+    console.log("DOMContentLoaded event fired");
+    
     // Smooth scroll function
     function smoothScroll(targetId) {
+        console.log("Smooth scroll function called with target ID:", targetId);
         const target = document.getElementById(targetId);
+        console.log("Target element:", target);
         if (target) {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            console.log("Smooth scroll executed");
         }
     }
 
     // Add event listeners to specific links
     const links = document.querySelectorAll('.galerijanav a');
+    console.log("Links found:", links);
     links.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
+            console.log("Clicked link with target ID:", targetId);
             smoothScroll(targetId);
         });
     });

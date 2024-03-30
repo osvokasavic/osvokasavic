@@ -1,22 +1,26 @@
 window.onload = function() {
-    // Check screen width
-    var screenWidth = window.innerWidth;
+    // Function to select the appropriate banner
+    function selectBanner() {
+        // Check screen width
+        var screenWidth = window.innerWidth;
 
-    // Select banner class based on screen width
-    var banner;
-    if (screenWidth < 600) {
-        banner = document.querySelector('.banner_f');
-    } 
-    else {
-        banner = document.querySelector('.banner');
+        // Select banner class based on screen width
+        var banner;
+        if (screenWidth < 600) {
+            banner = document.querySelector('.banner_f');
+        } else {
+            banner = document.querySelector('.banner');
+        }
+
+        return banner;
     }
 
-    // Get the title element
-    var naslov = document.querySelector('.naslov');
-    
-    if (banner && naslov) {
-        // Function to calculate the position of the title
-        function setNaslovPosition() {
+    // Function to set the position of the title
+    function setNaslovPosition() {
+        var banner = selectBanner();
+        var naslov = document.querySelector('.naslov');
+
+        if (banner && naslov) {
             // Get the width and height
             var bannerWidth = banner.offsetWidth;
             var bannerHeight = banner.offsetHeight;
@@ -29,12 +33,16 @@ window.onload = function() {
             naslov.style.left = centerX + 'px';
             naslov.style.top = centerY + 'px';
         }
-
-        // Call the setNaslovPosition function when the window is resized
-        window.addEventListener('resize', setNaslovPosition);
-        setNaslovPosition(); // Call it initially
     }
+
+    // Call setNaslovPosition function when the window is resized or orientation changes
+    window.addEventListener('resize', setNaslovPosition);
+    window.addEventListener('orientationchange', setNaslovPosition);
+
+    // Call setNaslovPosition initially
+    setNaslovPosition();
 };
+
 
 window.onscroll = function() {
     scrollFunction();

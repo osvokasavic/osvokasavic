@@ -6,7 +6,8 @@ window.onload = function() {
     var banner;
     if (screenWidth < 600) {
         banner = document.querySelector('.banner_f');
-    } else {
+    } 
+    else {
         banner = document.querySelector('.banner');
     }
 

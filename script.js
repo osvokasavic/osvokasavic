@@ -84,8 +84,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     }
 
-    // Add event listeners to all links with href starting with #
-    const links = document.querySelectorAll('a[href^="#"]');
+    // Add event listeners to specific links
+    const links = document.querySelectorAll('.galerijanav a');
     links.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
     });
 });
+
 
 
 function toggleNav() {

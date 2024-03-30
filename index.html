@@ -1,33 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ОШ "Војислав Вока Савић"</title>
     <!-- Увести css -->
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
-
-        .banner-container {
-            position: relative;
-            width: 100%;
-            height: 100vh; /* Take up the entire viewport height */
-            overflow: hidden;
-        }
-
-        .banner-container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensure the image covers the entire container */
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> 
     <meta name="description" content="Oficijalni sajt Osnovne škole 'Vojislav Voka Savić'
         Osnovna škola 'Vojislav Voka Savić' Lazarevac
         Prva škola u Lazarevcu">
@@ -35,8 +7,18 @@
 <body>
     <header>
         <!-- Навигација -->
-        <!-- Наслов -
-        <!-- Слика -->
+        <div id="nav-placeholder"></div>
+        <script>
+            fetch('navigation.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('nav-placeholder').innerHTML = data);
+        </script>
+        <!-- Наслов -->
+        <div class="naslov">
+            <h1><strong><b>ОСНОВНА ШКОЛА</b></strong></h1>
+            <h1><b>"ВОЈИСЛАВ ВОКА САВИЋ"</b></h1>
+            <h1><b>ЛАЗАРЕВАЦ</b></h1>
+        </div>
         <div class="banner-container">
             <picture> 
                 <source type="image/webp" srcset="slike/baner_skola_f.webp"> 
@@ -58,4 +40,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-

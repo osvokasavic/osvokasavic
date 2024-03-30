@@ -1,6 +1,6 @@
 window.onload = function() {
     // Узети банер
-    var banner = document.querySelector('.banner');
+    var banner = document.querySelector('.banner, .banner_f');
     // Узети наслов елемент
     var naslov = document.querySelector('.naslov');
     

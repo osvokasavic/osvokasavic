@@ -78,16 +78,19 @@ function scrollToTop() {
 document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOMContentLoaded event fired");
     
-    // Smooth scroll function
-    function smoothScroll(targetId) {
-        console.log("Smooth scroll function called with target ID:", targetId);
-        const target = document.getElementById(targetId);
-        console.log("Target element:", target);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            console.log("Smooth scroll executed");
-        }
+// Smooth scroll function
+function smoothScroll(targetId) {
+    // Extract the ID from the target URL
+    const idIndex = targetId.lastIndexOf('#');
+    const id = idIndex !== -1 ? targetId.substring(idIndex + 1) : targetId;
+
+    // Find the target element
+    const target = document.getElementById(id);
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+}
+
 
     // Add event listeners to specific links
     const links = document.querySelectorAll('.galerijanav a');

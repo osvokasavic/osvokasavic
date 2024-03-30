@@ -44,24 +44,37 @@ window.onload = function() {
 };
 
 
-// Function to smoothly scroll to the top of the page
-function scrollToTop() {
-    const c = document.documentElement.scrollTop || document.body.scrollTop;
-    if (c > 0) {
-        window.requestAnimationFrame(scrollToTop);
-        window.scrollTo(0, c - c / 8);
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    // Check if the div with id "scrollToTopBtn" exists
+    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    // If scrollToTopBtn exists, proceed with the scroll functionality
+    if (scrollToTopBtn) {
+        if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
     }
 }
 
-// Show or hide the scroll-to-top button based on scroll position
-window.addEventListener('scroll', function () {
-    var scrollButton = document.getElementById("scrollToTopBtn");
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollButton.style.visibility = "visible";
-    } else {
-        scrollButton.style.visibility = "hidden";
-    }
-});
+function scrollToTop() {
+    // Smooth scroll to the top of the page
+    const scrollToTop = () => {
+        const c = document.documentElement.scrollTop || document.body.scrollTop;
+        if (c > 0) {
+            window.requestAnimationFrame(scrollToTop);
+            window.scrollTo(0, c - c / 8);
+        }
+    };
+
+    scrollToTop();
+}
+
 
 
 function toggleNav() {

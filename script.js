@@ -75,21 +75,6 @@ function scrollToTop() {
     scrollToTop();
 }
 
-// Smooth scroll for navigation links
-document.querySelectorAll('.galerijanav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href');
-        const targetElement = document.getElementById(targetId.substring(1));
-
-        if (targetElement) {
-            const y = targetElement.getBoundingClientRect().top + window.pageYOffset;
-            window.scrollTo({ top: y, behavior: 'smooth' });
-        }
-    });
-});
-
 
 function toggleNav() {
     var overlay = document.getElementById('overlay');

@@ -75,6 +75,26 @@ function scrollToTop() {
     scrollToTop();
 }
 
+document.addEventListener("DOMContentLoaded", function(event) {
+    // Smooth scroll function
+    function smoothScroll(targetId) {
+        const target = document.getElementById(targetId);
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    // Add event listeners to all links with href starting with #
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            smoothScroll(targetId);
+        });
+    });
+});
+
 
 function toggleNav() {
     var overlay = document.getElementById('overlay');

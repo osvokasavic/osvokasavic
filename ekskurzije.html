@@ -7,6 +7,12 @@
     <!-- Import CSS -->
     <link rel="stylesheet" href="styles.css"> 
     <style>
+        .ecentar, .eleft, .eright {
+            word-wrap: break-word; /* Wrap long words */
+            overflow-wrap: break-word; /* For older browsers */
+            max-width: 100%; /* Maximum width for flexible layout */
+            flex: 1 1 auto;
+        }
         .ecentar {
             flex-basis: 33%;
             text-align: left;

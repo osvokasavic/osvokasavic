@@ -27,7 +27,7 @@ window.onload = function() {
 
             // Calculate the position ;
             var centerX = banner.offsetLeft + bannerWidth / 2;
-            var centerY = banner.offsetTop + bannerHeight / 2 - (bannerHeight / 4);
+            var centerY = banner.offsetTop + bannerHeight / 2 - (bannerHeight / 6);
 
             // Set the title at the coordinates
             naslov.style.left = centerX + 'px';

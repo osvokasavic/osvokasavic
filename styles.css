@@ -190,6 +190,7 @@ body {
   }
   .navbar {
     font-family: "Noto Sans JP", sans-serif;
+  }
 }
 @media screen and (max-width: 600px) {
   .navbar.responsive {position: relative;}

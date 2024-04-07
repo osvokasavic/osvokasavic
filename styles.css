@@ -87,7 +87,6 @@ body {
   overflow: hidden;
   background-color: #333;
   font-family: "Noto Sans JP", sans-serif;
-  padding-left: 20px;
   z-index: 30;
   padding-left:0;
   padding-right:0;
@@ -112,7 +111,7 @@ body {
 .dropdown {
   float: left;
   overflow: hidden;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 /* Дугме за падајући мени */

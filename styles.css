@@ -20,6 +20,8 @@ h4 {
 
 #embedded-map-display {
   text-align: center;
+  height: 50%;
+  width: 100%;
 }
 
 #scrollToTopBtn {

@@ -162,6 +162,15 @@ body {
   display: block;
 }
 
+@media screen and (max-width: 680px) {
+  .navbar {
+    font-family: "Cuprum", sans-serif;
+  }
+  .dropdown {
+    font-family: "Cuprum", sans-serif;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .navbar a:not(:first-child), .dropdown .dropbtn {
     display: none;

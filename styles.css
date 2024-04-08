@@ -7,10 +7,7 @@
 
 .overlay-content,
 .overlay,
-.overlay-content a,
-.overlaydropdown,
-.overlaydropbtn,
-.overlaydropdown-content {
+.overlay-content a {
   display: none;
 }
 

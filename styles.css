@@ -88,7 +88,8 @@ body {
 .navbar {
   overflow: hidden;
   background-color: #333;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   z-index: 30;
   padding-left:0;
   padding-right:0;
@@ -125,7 +126,8 @@ body {
 .dropdown {
   float: left;
   overflow: hidden;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 /* Дугме за падајући мени */
@@ -203,7 +205,8 @@ body {
     font-size: 1em;
   }
   .navbar {
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
   }
 }
 @media screen and (max-width: 600px) {

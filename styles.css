@@ -94,6 +94,18 @@ body {
   padding-right:0;
 }
 
+.navbar .dropdown i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar .dropdown:hover i {
+  transform: rotate(180deg);
+}
+
+.navbar .dropdown i {
+  transform: rotate(0deg);
+}
+
 .navbar .icon {
   display: none;
 }

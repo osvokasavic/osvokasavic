@@ -105,20 +105,18 @@ function smoothScroll(targetId) {
 
 
 
-function toggleNav() {
+function toggleNav(event) {
     var overlay = document.getElementById('overlay');
     var rect = overlay.getBoundingClientRect();
     var clickX = event.clientX - rect.left;
     var clickY = event.clientY - rect.top;
 
-    // Check if clicked within the specified range
-    if (clickX > -50 && clickX < rect.width + 50 &&
-        clickY > -200 && clickY < rect.height + 200) {
-        // Clicked within the range, do nothing
-        return;
+    // Check if clicked outside the specified range
+    if (clickX < -50 || clickX > rect.width + 50 ||
+        clickY < -200 || clickY > rect.height + 200) {
+        // Close the menu if clicked outside the range
+        overlay.style.display = "none";
     }
-
-    // Close the menu if clicked outside the specified range
-    overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
+
 

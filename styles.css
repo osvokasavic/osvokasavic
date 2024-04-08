@@ -85,7 +85,6 @@ body {
   font-size: 1.5em;
 }
 /* Навигација */
-.olnavbar,
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -96,17 +95,14 @@ body {
   padding-right:0;
 }
 
-.olnavbar .oldropdown i,
 .navbar .dropdown i {
   transition: transform 0.3s ease-in-out;
 }
 
-.olnavbar .oldropdown:hover i,
 .navbar .dropdown:hover i {
   transform: rotate(180deg);
 }
 
-.olnavbar .oldropdown i,
 .navbar .dropdown i {
   transform: rotate(0deg);
 }
@@ -116,7 +112,6 @@ body {
 }
 
 /* Links inside the navbar */
-.olnavbar,
 .navbar a {
   float: left;
   font-size: 16px;
@@ -127,7 +122,6 @@ body {
   z-index: 31;
 }
 
-.oldropdown,
 /* Падајући линкови */
 .dropdown {
   float: left;
@@ -136,8 +130,21 @@ body {
   font-weight: 400;
 }
 
+.overlaydropdown {
+  float: left;
+  overflow: hidden;
+  font-faimily: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0px;
+}
 /* Дугме за падајући мени */
-.oldropdown .oldropbtn
 .dropdown .dropbtn {
   font-size: 16px;
   border: none;
@@ -149,14 +156,22 @@ body {
   margin: 0px;
 }
 
-.olnavbar a:hover, oldropdown:hover .oldropbtn,
+.overlaydropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0px;
+}
 /* Црвена позадина линкова */
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
 }
 
 /* Падајући мени */
-.oldropdown-content,
 .dropdown-content {
   display: none;
   position: absolute;
@@ -167,7 +182,15 @@ body {
   font-family: "Cuprum", sans-serif;
 }
 
-.oldropdown-content a,
+.overlaydropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3;
+  font-family: "Cuprum", sans-serif;
+}
 /* Линкови у падајућем мениу */
 .dropdown-content a {
   float: none;
@@ -179,13 +202,11 @@ body {
 }
 
 /* Сива позадина падајућих линкова */
-.oldropdown-content a:hover,
 .dropdown-content a:hover {
   background-color: #ddd;
 }
 
 /* Show the dropdown menu on hover */
-.oldropdown:hover .oldropdown-content,
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -283,7 +304,7 @@ body {
 }
 
 .overlay-content {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

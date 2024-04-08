@@ -105,7 +105,7 @@ function smoothScroll(targetId) {
 console.log('loaded')
 
 
-function toggleNav(event) {
+function toggleNav() {
     var overlay = document.getElementById('overlay');
     var rect = overlay.getBoundingClientRect();
     var clickX = event.clientX - rect.left;

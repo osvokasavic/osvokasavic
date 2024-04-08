@@ -107,19 +107,18 @@ function smoothScroll(targetId) {
 
 function toggleNav() {
     var overlay = document.getElementById('overlay');
-    var overlaydropbtn = document.querySelector('.overlay-content');
-    
-    // Check if the overlay is currently open
-    if (overlay.style.display === "block") {
-        // Check if the click event originated from an element with the class "overlaydropbtn"
-        if (event.target.classList.contains('overlay-content')) {
-            return; // Do nothing if clicked on overlaydropbtn
-        }
-        // Close the overlay if the click event didn't originate from an element with the class "overlaydropbtn"
-        overlay.style.display = "none";
-    } else {
-        // Open the overlay if it's closed
-        overlay.style.display = "block";
+    var rect = overlay.getBoundingClientRect();
+    var clickX = event.clientX - rect.left;
+    var clickY = event.clientY - rect.top;
+
+    // Check if clicked within the specified range
+    if (clickX > -50 && clickX < rect.width + 50 &&
+        clickY > -200 && clickY < rect.height + 200) {
+        // Clicked within the range, do nothing
+        return;
     }
+
+    // Close the menu if clicked outside the specified range
+    overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
 

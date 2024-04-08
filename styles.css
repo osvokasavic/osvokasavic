@@ -347,3 +347,6 @@ body {
     padding: 10px 16px;
     text-decoration: none;
 }
+.overlay-content a:hover {
+  background-color: red;
+}

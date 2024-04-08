@@ -5,7 +5,12 @@
   overflow: hidden;
 }
 
-.hidden {
+.overlay-content,
+.overlay,
+.overlay-content a,
+.overlaydropdown,
+.overlaydropbtn,
+.overlaydropdown-content {
   display: none;
 }
 

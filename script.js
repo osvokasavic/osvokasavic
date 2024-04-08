@@ -102,7 +102,7 @@ function smoothScroll(targetId) {
         });
     });
 });
-
+console.log('loaded')
 
 
 function toggleNav(event) {
@@ -116,6 +116,7 @@ function toggleNav(event) {
         clickY < -200 || clickY > rect.height + 200) {
         // Close the menu if clicked outside the range
         overlay.style.display = "none";
+        console.log('Ha')
     }
 }
 

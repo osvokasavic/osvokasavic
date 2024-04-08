@@ -77,7 +77,6 @@ function scrollToTop() {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    console.log("DOMContentLoaded event fired");
     
 // Smooth scroll function
 function smoothScroll(targetId) {
@@ -95,12 +94,10 @@ function smoothScroll(targetId) {
 
     // Add event listeners to specific links
     const links = document.querySelectorAll('.galerijanav a');
-    console.log("Links found:", links);
     links.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
-            console.log("Clicked link with target ID:", targetId);
             smoothScroll(targetId);
         });
     });
@@ -108,14 +105,19 @@ function smoothScroll(targetId) {
 
 
 
-function toggleNav() {
+function toggleNav(event) {
     var overlay = document.getElementById('overlay');
+    var overlaydropbtn = document.querySelector('.overlaydropbtn');
+    
+    // Check if the click event originated from an element with the class "overlaydropbtn"
+    if (event.target.classList.contains('overlaydropbtn')) {
+        return; // Do nothing if clicked on overlaydropbtn
+    }
+
     overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
 
-// Function to handle dropdown menu visibility
-function toggleDropdown(button) {
-    var content = button.nextElementSibling;
-    content.style.display = content.style.display === "block" ? "none" : "block";
-}
+// Add event listener to the document to handle clicks
+document.addEventListener('click', toggleNav);
+
 

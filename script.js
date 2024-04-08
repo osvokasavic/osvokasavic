@@ -105,19 +105,21 @@ function smoothScroll(targetId) {
 
 
 
-function toggleNav(event) {
+function toggleNav() {
     var overlay = document.getElementById('overlay');
     var overlaydropbtn = document.querySelector('.overlaydropbtn');
     
-    // Check if the click event originated from an element with the class "overlaydropbtn"
-    if (event.target.classList.contains('overlaydropbtn')) {
-        return; // Do nothing if clicked on overlaydropbtn
+    // Check if the overlay is currently open
+    if (overlay.style.display === "block") {
+        // Check if the click event originated from an element with the class "overlaydropbtn"
+        if (event.target.classList.contains('overlaydropbtn')) {
+            return; // Do nothing if clicked on overlaydropbtn
+        }
+        // Close the overlay if the click event didn't originate from an element with the class "overlaydropbtn"
+        overlay.style.display = "none";
+    } else {
+        // Open the overlay if it's closed
+        overlay.style.display = "block";
     }
-
-    overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
-
-// Add event listener to the document to handle clicks
-document.addEventListener('click', toggleNav);
-
 

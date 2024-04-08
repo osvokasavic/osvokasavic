@@ -340,6 +340,7 @@ body {
   padding: 5px;
   background-color: #f00;
   cursor: pointer;
+}
 .overlay-content {
     position: absolute;
     top: 50%;

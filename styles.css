@@ -5,11 +5,6 @@
   overflow: hidden;
 }
 
-.overlay-content,
-.overlay,
-.overlay-content a {
-  display: none;
-}
 
 .banner-container img {
   position: absolute;

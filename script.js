@@ -102,22 +102,9 @@ function smoothScroll(targetId) {
         });
     });
 });
-console.log('loaded')
 
 
 function toggleNav() {
     var overlay = document.getElementById('overlay');
-    var rect = overlay.getBoundingClientRect();
-    var clickX = event.clientX - rect.left;
-    var clickY = event.clientY - rect.top;
-
-    // Check if clicked outside the specified range
-    if (clickX < -50 || clickX > rect.width + 50 ||
-        clickY < -200 || clickY > rect.height + 200) {
-        // Close the menu if clicked outside the range
-        overlay.style.display = "none";
-        console.log('Ha')
-    }
+    overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
-
-

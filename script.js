@@ -44,11 +44,6 @@ window.onload = function() {
 };
 
 
-document.getElementById("close").addEventListener("click", function() {
-    var content = document.querySelector(".overlaydropdown-content");
-  content.classList.toggle("hidden");
-});
-
 
 window.onscroll = function() {
     scrollFunction();

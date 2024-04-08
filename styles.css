@@ -5,6 +5,10 @@
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .banner-container img {
   position: absolute;
   top: 0;

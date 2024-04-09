@@ -97,6 +97,13 @@ body {
   z-index: 1;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
   font-size: 1.5em;
+  animation: moveLeftToRight 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-79%); /* Start offscreen left */
+  }
 }
 
 @-webkit-keyframes fadeIn {

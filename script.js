@@ -108,3 +108,15 @@ function toggleNav() {
     var overlay = document.getElementById('overlay');
     overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var lazyImages = document.querySelectorAll('.lazy-image');
+
+    lazyImages.forEach(function(img) {
+        img.addEventListener('load', function() {
+            img.style.display = 'block';
+            img.previousElementSibling.style.display = 'none'; // Hide placeholder
+        });
+    });
+});

@@ -18,7 +18,7 @@ window.onload = function() {
     // Function to set the position of the title
     function setNaslovPosition() {
         var banner = selectBanner();
-        var naslov = document.querySelector('.naslov');
+        var naslov = document.querySelector('.placeholder ');
 
         if (banner && naslov) {
             // Get the width and height

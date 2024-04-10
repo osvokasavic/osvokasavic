@@ -109,7 +109,6 @@ function toggleNav() {
     overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
 
-setTimeout(function() {
-      document.querySelector('.naslov').classList.add('show');
-    }, 1500); //sda
-});
+    setTimeout(function() {
+      document.querySelector('.delayed-effect').classList.add('show');
+    }, 1500);

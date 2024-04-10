@@ -119,4 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
             img.previousElementSibling.style.display = 'none'; // Hide placeholder
         });
     });
+setTimeout(function() {
+      document.querySelector('.naslov').classList.add('show');
+    }, 1500);
 });

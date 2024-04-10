@@ -108,7 +108,3 @@ function toggleNav() {
     var overlay = document.getElementById('overlay');
     overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
-
-    setTimeout(function() {
-      document.querySelector('.naslov').classList.add('show');
-    }, 1000);

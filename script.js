@@ -111,5 +111,5 @@ function toggleNav() {
 
 setTimeout(function() {
       document.querySelector('.naslov').classList.add('show');
-    }, 1500);
+    }, 1500); //sda
 });

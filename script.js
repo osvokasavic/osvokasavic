@@ -110,5 +110,5 @@ function toggleNav() {
 }
 
     setTimeout(function() {
-      document.querySelector('.delayed-effect').classList.add('show');
+      document.querySelector('.naslov').classList.add('show');
     }, 1500);

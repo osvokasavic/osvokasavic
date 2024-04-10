@@ -85,6 +85,15 @@ body {
   text-align: center;
   font-family: "Cuprum", sans-serif;
 }
+
+.naslov-up {
+  transition: transform 0.3s ease;
+}
+
+.naslov-up:hover {
+  transform: translateY(-15px); /* Moving text 10px up */
+}
+
 /* Наслов (КОРИСТИТИ САМО ЗА ПОЧЕТНУ СТРАНУ ИНАЧЕ ЋЕ ДА ПРАВИ ПРОБЛЕМ)*/
 .naslov {
   text-align: center;

@@ -12,22 +12,6 @@
   height: 100%;
 }
 
-.placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ccc; /* Choose your desired placeholder color */
-}
-
-.lazy-image {
-    display: none;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Adjust image size and position */
-}
-
 .overlay {
   display: none;
 }

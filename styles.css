@@ -113,7 +113,13 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
   font-size: 1.5em;
   animation: moveLeftToRight 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  transition: opacity 2s ease;
+  opacity: 0;
 }
+
+.naslov.show {
+    opacity: 1; /* Change opacity to 1 to reveal the element */
+  }
 
 @keyframes moveLeftToRight {
   0% {

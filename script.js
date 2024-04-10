@@ -109,16 +109,6 @@ function toggleNav() {
     overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    var lazyImages = document.querySelectorAll('.lazy-image');
-
-    lazyImages.forEach(function(img) {
-        img.addEventListener('load', function() {
-            img.style.display = 'block';
-            img.previousElementSibling.style.display = 'none'; // Hide placeholder
-        });
-    });
 setTimeout(function() {
       document.querySelector('.naslov').classList.add('show');
     }, 1500);

@@ -4,7 +4,7 @@ window.onload = function() {
         // Check screen width
         var screenWidth = window.innerWidth;
 
-        // Select banner class based on screen width
+        // Select banner class based on screen widthh
         var banner;
         if (screenWidth < 601) {
             banner = document.querySelector('.banner_f');

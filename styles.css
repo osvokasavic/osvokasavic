@@ -24,14 +24,14 @@ body {
 @supports not (background-image: url('/slike/baner_skola.webp')) {
   /* Media query for screens less than 600px */
   @media (max-width: 600px) {
-    .responsive-img {
+    .banner {
       background-image: url('/slike/baner_skola_f.jpg');
     }
   }
 
   /* Media query for screens larger than 600px */
   @media (min-width: 601px) {
-    .responsive-img {
+    .banner {
       background-image: url('/slike/baner_skola.jpg');
     }
   }

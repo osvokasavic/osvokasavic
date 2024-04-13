@@ -1,20 +1,4 @@
 window.onload = function() {
-    // Function to select the appropriate banner
-    function selectBanner() {
-        // Check screen width
-        var screenWidth = window.innerWidth;
-
-        // Select banner class based on screen widthh
-        var banner;
-        if (screenWidth < 601) {
-            banner = document.querySelector('.banner_f');
-        } else {
-            banner = document.querySelector('.banner');
-        }
-
-        return banner;
-    }
-
     // Function to set the position of the title
     function setNaslovPosition() {
         var banner = selectBanner();

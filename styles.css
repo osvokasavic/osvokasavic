@@ -4,7 +4,7 @@ body {
   height: 100%;
 }
 
-@supports (background-image: url('https://osvokasavic.github.io/slike/baner_skola.webpp')) {
+@supports (background-image: url('https://osvokasavic.github.io/slike/baner_skola.webp')) {
   /* Media query for screens less than 600px */
   @media (max-width: 600px) {
     .banner {

@@ -1,3 +1,42 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f0ecec;
+  height: 100%;
+}
+
+@supports (background-image: url('/slike/baner_skola.webp')) {
+  /* Media query for screens less than 600px */
+  @media (max-width: 600px) {
+    .banner {
+       background-image: url('/slike/baner_skola_f.webp');
+    }
+  }
+
+  /* Media query for screens larger than 600px */
+  @media (min-width: 601px) {
+    .banner {
+      background-image: url('/slike/baner_skola.webp');
+    }
+  }
+}
+
+/* Fallback for browsers that don't support WebP */
+@supports not (background-image: url('/slike/baner_skola.webp')) {
+  /* Media query for screens less than 600px */
+  @media (max-width: 600px) {
+    .responsive-img {
+      background-image: url('/slike/baner_skola_f.jpg');
+    }
+  }
+
+  /* Media query for screens larger than 600px */
+  @media (min-width: 601px) {
+    .responsive-img {
+      background-image: url('/slike/baner_skola.jpg');
+    }
+  }
+}
+
 .banner-container {
   position: relative;
   width: 100%;
@@ -69,13 +108,6 @@ body {
   right: 8px;
   height: 124px;
   width: 100px;
-}
-
-.banner {
-  display: block;
-}
-.banner_f {
-  display: none;
 }
 
 .centar {
@@ -293,12 +325,6 @@ body {
   .navbar a.icon {
     float: right;
     display: block;
-  }
-  .banner_f {
-    display: block;
-  }
-  .banner{
-    display: none;
   }
   .naslov {
     font-size: 1em;

@@ -1,34 +1,3 @@
-window.onload = function() {
-    // Function to set the position of the title
-    function setNaslovPosition() {
-        var banner = document.querySelector('.banner');
-        var naslov = document.querySelector('.naslov');
-
-        if (banner && naslov) {
-            // Get the width and height
-            var bannerWidth = banner.offsetWidth;
-            var bannerHeight = banner.offsetHeight;
-
-            // Calculate the position ;
-            var centerX = banner.offsetLeft + bannerWidth / 2;
-            var centerY = banner.offsetTop + bannerHeight / 2 - (bannerHeight / 6);
-
-            // Set the title at the coordinates
-            naslov.style.left = centerX + 'px';
-            naslov.style.top = centerY + 'px';
-        }
-    }
-
-    // Call setNaslovPosition function when the window is resized or orientation changes
-    window.addEventListener('resize', setNaslovPosition);
-    window.addEventListener('orientationchange', setNaslovPosition);
-
-    // Call setNaslovPosition initially
-    setNaslovPosition();
-};
-
-
-
 window.onscroll = function() {
     scrollFunction();
 };

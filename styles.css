@@ -4,18 +4,18 @@ body {
   height: 100%;
 }
 
-@supports (background-image: url('https://osvokasavic.github.io/slike/baner_skola.webp')) {
+@supports (background-image: url('/slike/baner_skola.webp')) {
   /* Media query for screens less than 600px */
   @media (max-width: 600px) {
-    .banner {
+    .banner-container {
        background-image: url('/slike/baner_skola_f.webp');
     }
   }
 
   /* Media query for screens larger than 600px */
   @media (min-width: 601px) {
-    .banner {
-      background-image: url('https://osvokasavic.github.io/slike/baner_skola.webp');
+    .banner-container {
+      background-image: url('/slike/baner_skola.webp');
     }
   }
 }
@@ -24,24 +24,26 @@ body {
 @supports not (background-image: url('/slike/baner_skola.webp')) {
   /* Media query for screens less than 600px */
   @media (max-width: 600px) {
-    .banner {
+    .banner-container {
       background-image: url('/slike/baner_skola_f.jpg');
     }
   }
 
   /* Media query for screens larger than 600px */
   @media (min-width: 601px) {
-    .banner {
+    .banner-container {
       background-image: url('/slike/baner_skola.jpg');
     }
   }
 }
 
 .banner-container {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Take up the entire viewport height */
   overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .box {
@@ -55,16 +57,6 @@ body {
   display: none;
 }
 
-.banner-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the entire container */
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
 }
 
 h4 {
@@ -121,6 +113,7 @@ body {
   font-family: "Cuprum", sans-serif;
   position: absolute;
   left: 50%;
+  top: 30%;
   color: white;
   transform: translateX(-50%);
   z-index: 1;

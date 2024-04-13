@@ -4,7 +4,7 @@ body {
   height: 100%;
 }
 
-@supports (background-image: url('/slike/baner_skola.webp')) {
+@supports (background-image: url('https://osvokasavic.github.io/slike/baner_skola.webpp')) {
   /* Media query for screens less than 600px */
   @media (max-width: 600px) {
     .banner {
@@ -15,7 +15,7 @@ body {
   /* Media query for screens larger than 600px */
   @media (min-width: 601px) {
     .banner {
-      background-image: url('/slike/baner_skola.webp');
+      background-image: url('https://osvokasavic.github.io/slike/baner_skola.webp');
     }
   }
 }

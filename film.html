@@ -43,38 +43,43 @@
     <p></p>
 </footer>
 <script>
-    const dvdLogo = document.querySelector('.dvd-logo img');
+const dvdLogo = document.querySelector('.dvd-logo img');
 
-    let x = 0;
-    let y = 0;
-    let dx = 1;
-    let dy = 1;
-    const speed = 2;
+if (!dvdLogo) {
+  console.error("DVD logo image not found!");
+} else {
+  let x = 0;
+  let y = 0;
+  let dx = 1;
+  let dy = 1;
+  const speed = 2;
 
-    function animate() {
-      const maxX = window.innerWidth - dvdLogo.width;
-      const maxY = window.innerHeight - dvdLogo.height;
+  function animate() {
+    const maxX = window.innerWidth - dvdLogo.width;
+    const maxY = window.innerHeight - dvdLogo.height;
 
+    x += dx * speed;
+    y += dy * speed;
+
+    if (x <= 0 || x >= maxX) {
+      dx = -dx;
       x += dx * speed;
-      y += dy * speed;
-
-      if (x <= 0 || x >= maxX) {
-        dx = -dx;
-        x += dx * speed;
-      }
-
-      if (y <= 0 || y >= maxY) {
-        dy = -dy;
-        y += dy * speed;
-      }
-
-      dvdLogo.style.left = x + 'px';
-      dvdLogo.style.top = y + 'px';
-
-      requestAnimationFrame(animate);
     }
 
-    animate();
+    if (y <= 0 || y >= maxY) {
+      dy = -dy;
+      y += dy * speed;
+    }
+
+    dvdLogo.style.left = x + 'px';
+    dvdLogo.style.top = y + 'px';
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+}
+
 </script>
 </body>
 </html>

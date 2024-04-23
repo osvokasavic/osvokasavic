@@ -6,11 +6,20 @@
     <title>ОШ "Војислав Вока Савић" Филм</title>
     <!-- Убацити css -->
     <link rel="stylesheet" href="styles.css"> 
-    <style>
-        .dvd-logo {
-            position: absolute;
-        }
-    </style>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent; /* Set background color to transparent */
+  }
+
+  .dvd-logo {
+    position: absolute;
+    background-color: transparent; /* Set background color to transparent */
+  }
+</style>
 </head>
 <body>
     <header>
@@ -27,46 +36,45 @@
         </div>
       <h4>Филм о школи више није могуће приступити са линка на старом сајту зато што је Adobe престао подржавати Flash Player од 2021.</h4>
     </header>
-    <div class="dvd-logo">
+<div class="dvd-logo">
   <img src="/slike/logo.webp" alt="DVD Logo">
 </div>
-    <footer>
-        <p></p>
-    </footer>
-<script src="script.js"></script>
+<footer>
+    <p></p>
+</footer>
 <script>
     const dvdLogo = document.querySelector('.dvd-logo img');
 
-let x = 0;
-let y = 0;
-let dx = 1;
-let dy = 1;
-const speed = 2;
+    let x = 0;
+    let y = 0;
+    let dx = 1;
+    let dy = 1;
+    const speed = 2;
 
-function animate() {
-  const maxX = window.innerWidth - dvdLogo.width;
-  const maxY = window.innerHeight - dvdLogo.height;
+    function animate() {
+      const maxX = window.innerWidth - dvdLogo.width;
+      const maxY = window.innerHeight - dvdLogo.height;
 
-  x += dx * speed;
-  y += dy * speed;
+      x += dx * speed;
+      y += dy * speed;
 
-  if (x <= 0 || x >= maxX) {
-    dx = -dx;
-    x += dx * speed;
-  }
+      if (x <= 0 || x >= maxX) {
+        dx = -dx;
+        x += dx * speed;
+      }
 
-  if (y <= 0 || y >= maxY) {
-    dy = -dy;
-    y += dy * speed;
-  }
+      if (y <= 0 || y >= maxY) {
+        dy = -dy;
+        y += dy * speed;
+      }
 
-  dvdLogo.style.left = x + 'px';
-  dvdLogo.style.top = y + 'px';
+      dvdLogo.style.left = x + 'px';
+      dvdLogo.style.top = y + 'px';
 
-  requestAnimationFrame(animate);
-}
+      requestAnimationFrame(animate);
+    }
 
-animate();
+    animate();
 </script>
 </body>
 </html>

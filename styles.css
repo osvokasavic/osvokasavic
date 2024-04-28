@@ -39,7 +39,6 @@ body {
 
 .banner-container {
   overflow: hidden;
-  position: absolute;
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -147,12 +146,14 @@ body {
 /* Навигација */
 .navbar {
   overflow: hidden;
-  background-color: #333;
-  font-family: "Roboto", sans-serif;
+  position:fixed;
+  background-color: rgba(0, 0, 0, 0.3);  font-family: "Roboto", sans-serif;
   font-weight: 400;
   z-index: 30;
   padding-left:0;
   padding-right:0;
+  transition: background-color 0.3s ease;
+  top: 0;
 }
 
 .navbar .dropdown i {
@@ -249,13 +250,12 @@ body {
 /* Падајући мени */
 .dropdown-content {
   display: none;
-  position: absolute;
+  position: fixed;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 3;
   font-family: "Cuprum", sans-serif;
-  webkit-animation: fadeIn 0.3s;
   animation: fadeIn 0.3s;
 }
 
@@ -334,6 +334,11 @@ body {
     right: 0;
     top: 0;
   }
+
+  .navbar {
+    width: 100%
+  }
+  
   .navbar.responsive a {
     float: none;
     display: block;

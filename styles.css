@@ -154,6 +154,7 @@ body {
   padding-right:0;
   transition: background-color 0.3s ease;
   top: 0;
+  width: 100%;
 }
 
 .navbar .dropdown i {
@@ -335,10 +336,6 @@ body {
     top: 0;
   }
 
-  .navbar {
-    width: 100%
-  }
-  
   .navbar.responsive a {
     float: none;
     display: block;

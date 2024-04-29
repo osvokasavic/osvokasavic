@@ -158,9 +158,6 @@ body {
 /* Навигација */
 .navbar {
   overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
   background-color: #333;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -199,7 +196,15 @@ body {
   display: none;
 }
 
-.navind {
+body:not(.index) + .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Set navbar position to fixed when body has class "index" */
+body.index + .navbar {
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.3) !important;
   position: fixed;
   top: 0;

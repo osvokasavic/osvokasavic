@@ -7,18 +7,31 @@
     <!-- Убацити css -->
     <link rel="stylesheet" href="styles.css"> 
 <style>
-  body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-    background-color: transparent; /* Set background color to transparent */
-  }
+body {
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
-  .dvd-logo {
-    position: absolute;
-    background-color: transparent; /* Set background color to transparent */
-  }
+#black {
+  height: 100vh;
+  width: 100vw;
+  background-color: #111;
+}
+
+#dvd {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 50px;
+  width: 100px;
+  mask: url("https://upload.wikimedia.org/wikipedia/commons/9/9b/DVD_logo.svg");
+  -webkit-mask: url("https://upload.wikimedia.org/wikipedia/commons/9/9b/DVD_logo.svg");
+  background-repeat: no-repeat;
+  background-size: 75px;
+  background-position: center;
+}
+
 </style>
 </head>
 <body>
@@ -36,51 +49,56 @@
         </div>
       <h4>Филм о школи више није могуће приступити са линка на старом сајту зато што је Adobe престао подржавати Flash Player од 2021.</h4>
     </header>
-<div class="dvd-logo">
-  <img src="/slike/logo.webp" alt="DVD Logo">
+<div id="black">
+  <div id="dvd"></div>
 </div>
 <footer>
     <p></p>
 </footer>
 <script>
-const dvdLogo = document.querySelector('.dvd-logo img');
+let x = 0,
+  y = 0,
+  dirX = 1,
+  dirY = 1;
+const speed = 2;
+const pallete = ["#ff8800", "#e124ff", "#6a19ff", "#ff2188"];
+let dvd = document.getElementById("dvd");
+dvd.style.backgroundColor = pallete[0];
+let prevColorChoiceIndex = 0;
+let black = document.getElementById("black");
+const dvdWidth = dvd.clientWidth;
+const dvdHeight = dvd.clientHeight;
 
-if (!dvdLogo) {
-  console.error("DVD logo image not found!");
-} else {
-  let x = 0;
-  let y = 0;
-  let dx = 1;
-  let dy = 1;
-  const speed = 2;
-
-  dvdLogo.onload = function() {
-    function animate() {
-      const maxX = window.innerWidth - dvdLogo.width;
-      const maxY = window.innerHeight - dvdLogo.height;
-
-      x += dx * speed;
-      y += dy * speed;
-
-      if (x <= 0 || x >= maxX) {
-        dx = -dx;
-        x += dx * speed;
-      }
-
-      if (y <= 0 || y >= maxY) {
-        dy = -dy;
-        y += dy * speed;
-      }
-
-      dvdLogo.style.left = x + 'px';
-      dvdLogo.style.top = y + 'px';
-
-      requestAnimationFrame(animate);
-    }
-
-    animate();
-  }
+function getNewRandomColor() {
+  const currentPallete = [...pallete]
+  currentPallete.splice(prevColorChoiceIndex,1)
+  const colorChoiceIndex = Math.floor(Math.random() * currentPallete.length);
+  prevColorChoiceIndex = colorChoiceIndex<prevColorChoiceIndex?colorChoiceIndex:colorChoiceIndex+1;
+  const colorChoice = currentPallete[colorChoiceIndex];
+  return colorChoice;
 }
+function animate() {
+  const screenHeight = document.body.clientHeight;
+  const screenWidth = document.body.clientWidth;
+
+  if (y + dvdHeight >= screenHeight || y < 0) {
+    dirY *= -1;
+    dvd.style.backgroundColor = getNewRandomColor();
+  }
+  if (x + dvdWidth >= screenWidth || x < 0) {
+    dirX *= -1;
+
+    dvd.style.backgroundColor = getNewRandomColor();
+  }
+  x += dirX * speed;
+  y += dirY * speed;
+  dvd.style.left = x + "px";
+  dvd.style.top = y + "px";
+  window.requestAnimationFrame(animate);
+}
+
+window.requestAnimationFrame(animate);
+
 
 
 

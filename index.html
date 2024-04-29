@@ -20,12 +20,13 @@
 <body>
     <header>
         <!-- Навигација -->
-        <div id="nav-placeholder"></div>
+        <div class="navind">
+            <div id="nav-placeholder"></div>
+        </div>
         <script>
             fetch('navigation.html')
                 .then(response => response.text())
                 .then(data => document.getElementById('nav-placeholder').innerHTML = data);
-
             setTimeout(function() {
                   document.querySelector('.naslov').classList.add('show');
                 }, 1500);

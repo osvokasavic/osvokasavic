@@ -15,7 +15,6 @@
         .navbar {
             position: fixed !important;
             top: 0 !important;
-            background-color: rgba(0, 0, 0, 0.3);
     </style>
 </head>
 <body>
@@ -38,7 +37,7 @@
 <script src="script.js"></script>
 <script>
     function adjustNavbarBackground() {
-        var navbar = querySelector('navbar');
+        var navbar = document.getElementById('navbar');
         if (window.pageYOffset == 0) {
             navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
         } else {

@@ -302,7 +302,7 @@ body {
 
 /* Сива позадина падајућих линкова */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #c0c0c0;
 }
 
 /* Show the dropdown menu on hover */

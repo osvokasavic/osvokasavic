@@ -50,9 +50,7 @@
     window.addEventListener('scroll', function() {
         adjustNavbarBackground();
     });
-    setTimeout(function) {
-        adjustNavbarBackground();
-    }, 500);
+    setTimeout(adjustNavbarBackground, 500);
     
     fetch('navigation.html')
         .then(response => response.text())

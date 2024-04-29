@@ -2,6 +2,18 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #f0ecec;
   height: 100%;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1183px) {
+  body {
+    margin-top:100px;
+  }
+  @media screen and (max-width: 600px) {
+    body {
+      margin-top: 50px;
+    }
+  }
 }
 
 @supports (background-image: url('/slike/baner_skola.webp')) {
@@ -146,6 +158,9 @@ body {
 /* Навигација */
 .navbar {
   overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: #333;
   font-family: "Roboto", sans-serif;
   font-weight: 400;

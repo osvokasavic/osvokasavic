@@ -210,6 +210,9 @@ body.index + .navbar {
   top: 0;
 }
 
+body.index + body {
+  margin-top: 0px;
+
 /* Links inside the navbar */
 .navbar a {
   float: left;

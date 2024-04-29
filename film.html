@@ -81,7 +81,7 @@ function animate() {
   const screenHeight = document.body.clientHeight;
   const screenWidth = document.body.clientWidth;
 
-  if (y + dvdHeight >= screenHeight || y < 40) {
+  if (y + dvdHeight >= screenHeight || y < 0) {
     dirY *= -1;
     dvd.style.backgroundColor = getNewRandomColor();
   }

@@ -16,6 +16,7 @@
             position: fixed !important;
             top: 0 !important;
         }
+        
         #pocetna {
             background-color: #FFA500;
         }
@@ -42,10 +43,12 @@
 <script>
     function adjustNavbarBackground() {
         var navbar = document.getElementById('navbar');
+        var pocetna = document.getElementById('pocetna');
         if (window.pageYOffset == 0) {
             navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
         } else {
             navbar.style.backgroundColor = 'rgba(0, 0, 0, 1)';
+            pocetna.style.backgroundColor = 'orange';
         }
     }
      window.onload = function() {

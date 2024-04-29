@@ -7,16 +7,16 @@
     <!-- Увести css -->
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Istorijat Osnovne škole 'Vojislav Voka Savić'">
+    <style>
+        #istorijat {
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
     <header>
         <!-- Навигација -->
         <div id="nav-placeholder"></div>
-        <script>
-            fetch('navigation.html')
-                .then(response => response.text())
-                .then(data => document.getElementById('nav-placeholder').innerHTML = data);
-        </script>
         <!-- Наслов -->
         <div class="centar">
             <h1><b>Историјат</b></h1>
@@ -43,5 +43,10 @@
         <p></p>
     </footer>
 <script src="script.js"></script>
+<script>
+    fetch('navigation.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('nav-placeholder').innerHTML = data);
+</script>
 </body>
 </html>

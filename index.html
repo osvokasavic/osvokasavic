@@ -35,17 +35,25 @@
     </footer>
 <script src="script.js"></script>
 <script>
-    window.addEventListener('scroll', function() {
-    var navbar = document.getElementById('navbar');
+    function adjustNavbarBackground() {
+        var navbar = document.getElementById('navbar');
         if (window.pageYOffset == 0) {
             navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
         } else {
             navbar.style.backgroundColor = 'rgba(0, 0, 0, 1)';
         }
+    }
+     window.onload = function() {
+         adjustNavbarBackground();
+    };
+    window.addEventListener('scroll', function() {
+        adjustNavbarBackground();
     });
+    
     fetch('navigation.html')
         .then(response => response.text())
         .then(data => document.getElementById('nav-placeholder').innerHTML = data);
+    
     setTimeout(function() {
         document.querySelector('.naslov').classList.add('show');
     }, 1500);

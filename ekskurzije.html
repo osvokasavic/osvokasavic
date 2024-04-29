@@ -16,17 +16,18 @@
           border-collapse: collapse;
           width: 100%;
         }
+        #aktivnosti {
+            background-color: red;
+        }
+        #ekskurzije {
+            background-color: red;
+        }
     </style>
 </head>
 <body>
     <header>
         <!-- Navigation -->
         <div id="nav-placeholder"></div>
-        <script>
-            fetch('navigation.html')
-                .then(response => response.text())
-                .then(data => document.getElementById('nav-placeholder').innerHTML = data);
-        </script>
         <!-- Title -->
         <div class="centar">
             <h1><b>Екскурзије</b></h1>
@@ -99,4 +100,9 @@
 </table>
 </body>
 <script src="script.js"></script>
+<script>
+    fetch('navigation.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('nav-placeholder').innerHTML = data);
+</script>
 </html>

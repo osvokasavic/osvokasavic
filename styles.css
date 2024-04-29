@@ -100,12 +100,6 @@ h4 {
   background-color: #666; /* Darker gray on hover */
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #f0ecec;
-  height: 100%;
-}
-
 .logo {
   position: absolute;
   top: 8px;

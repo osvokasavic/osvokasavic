@@ -196,23 +196,6 @@ body {
   display: none;
 }
 
-body:not(.index) + .navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* Set navbar position to fixed when body has class "index" */
-body.index + .navbar {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.3) !important;
-  position: fixed;
-  top: 0;
-}
-
-body.index + body {
-  margin-top: 0px;
-
 /* Links inside the navbar */
 .navbar a {
   float: left;

@@ -19,14 +19,6 @@
         <div class="navind">
             <div id="nav-placeholder"></div>
         </div>
-        <script>
-            fetch('navigation.html')
-                .then(response => response.text())
-                .then(data => document.getElementById('nav-placeholder').innerHTML = data);
-            setTimeout(function() {
-                  document.querySelector('.naslov').classList.add('show');
-                }, 1500);
-        </script>
         <!-- Наслов -->
         <div class="naslov">
             <h1>ОСНОВНА ШКОЛА</h1>
@@ -50,6 +42,12 @@
             navbar.style.backgroundColor = 'rgba(0, 0, 0, 1)';
         }
     });
+    fetch('navigation.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('nav-placeholder').innerHTML = data);
+    setTimeout(function() {
+        document.querySelector('.naslov').classList.add('show');
+    }, 1500);
 </script>
 </body>
 </html>

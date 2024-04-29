@@ -28,11 +28,6 @@
     <header>
         <!-- Навигација -->
         <div id="nav-placeholder"></div>
-        <script>
-            fetch('navigation.html')
-                .then(response => response.text())
-                .then(data => document.getElementById('nav-placeholder').innerHTML = data);
-        </script>
         <!-- Наслов -->
         <div class="centar">
             <h1><b>Запослени</b></h1>
@@ -357,5 +352,10 @@
     </header>
 <button onclick="scrollToTop()" id="scrollToTopBtn"><i class="fas fa-arrow-up"></i></button>
 <script src="script.js"></script>
+<script>
+    fetch('navigation.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('nav-placeholder').innerHTML = data);
+</script>
 </body>
 </html>

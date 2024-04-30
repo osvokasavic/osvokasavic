@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОШ "Војислав Вока Савић" Секције</title>
+    <!-- Увести css -->
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="lightbox.css">
+    <style>
+	#sekcije {
+	    background-color: #cccccc;
+	}
+	#aktivnosti {
+	    background-color: firebrick;
+	}
+    </style>
+</head>
+<body>
+    <header>
+        <div id="nav-placeholder"></div>
+
+        <div class="centar">
+            <h1><b>Сеиције</b></h1>
+        </div>
+    </header>
+<a href="slike/baner_skola.jpg" data-lightbox="skola" data-title="caption">Image #1</a>
+<a href="slike/baner_skola.webp" data-lightbox="skola" data-title="My caption">Image #2</a>
+<a href="slike/baner_skola_f.jpg" data-lightbox="skola" data-title="My captions">Image #3</a>
+<a href="slike/logo.webp" data-lightbox="skola" data-title="My captiondsa">Image #6</a>
+</body>
+<script src="script.js"></script>
+<script src="lightbox-plus-jquery.js"></script>
+<script>
+    fetch('navigation.html')
+	.then(response => response.text())
+	.then(data => document.getElementById('nav-placeholder').innerHTML = data);
+</script>
+</html>

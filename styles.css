@@ -4,7 +4,7 @@ body {
   height: 100%;
   margin-top: 50px;
 }
-img {
+img:hover {
   border: 2px solid #fc4c02;
   border-radius: 6px;
 }

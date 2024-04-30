@@ -4,6 +4,10 @@ body {
   height: 100%;
   margin-top: 50px;
 }
+img {
+  border: 2px solid #fc4c02;
+  border-radius: 6px;
+}
 
 @media screen and (max-width: 1183px) {
   body {

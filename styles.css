@@ -9,6 +9,14 @@ img:hover {
   border-radius: 6px;
 }
 
+naslov-up:
+  transition: transform 0.3s ease; /* Adding transition */
+}
+
+.naslov-up:hover {
+  transform: translateY(-10px); /* Moving text up by 10px on hover */
+}
+
 @media screen and (max-width: 1183px) {
   body {
     margin-top:100px;

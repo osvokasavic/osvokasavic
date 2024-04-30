@@ -123,6 +123,11 @@ h4 {
   font-family: "Cuprum", sans-serif;
 }
 
+b {
+  opacity: 0.1;
+  height: 2px;
+}
+
 /* Наслов (КОРИСТИТИ САМО ЗА ПОЧЕТНУ СТРАНУ ИНАЧЕ ЋЕ ДА ПРАВИ ПРОБЛЕМ)*/
 .naslov {
   text-align: center;

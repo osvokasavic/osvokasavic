@@ -125,24 +125,16 @@ h4 {
     opacity: .1;
 }
 
+.pglv {
+  padding-left: 20px;
+  padding-right:20px;
+}
+
 .centar {
   text-align: center;
   font-family: "Cuprum", sans-serif;
   padding-left: 20px;
   padding-right: 20px;
-}
-
-.line-l, .line-r {
-  box-sizing: border-box;
-  width:50%;
-  border-top: 2px solid black;
-  opacity: 0.1;
-}
-.line-r {
-  text-align: left;
-}
-.line-l{
-  text-align: right;
 }
 
 .naslov {

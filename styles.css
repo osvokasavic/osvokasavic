@@ -123,12 +123,19 @@ h4 {
   font-family: "Cuprum", sans-serif;
 }
 
-b {
+.line-l, .line-r {
+  box-sizing: border-box;
+  width:50%;
+  border-top: 2px solid black;
   opacity: 0.1;
-  height: 2px;
+}
+.line-r {
+  text-align: left;
+}
+.line-l{
+  text-align: right;
 }
 
-/* Наслов (КОРИСТИТИ САМО ЗА ПОЧЕТНУ СТРАНУ ИНАЧЕ ЋЕ ДА ПРАВИ ПРОБЛЕМ)*/
 .naslov {
   text-align: center;
   font-family: "Cuprum", sans-serif;

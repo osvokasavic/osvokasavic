@@ -4,17 +4,14 @@ body {
   height: 100%;
   margin-top: 50px;
 }
+
+img {
+  border: 2px solid transparent;
+}
+
 img:hover {
   border: 2px solid #fc4c02;
   border-radius: 6px;
-}
-
-naslov-up:
-  transition: transform 0.3s ease; /* Adding transition */
-}
-
-.naslov-up:hover {
-  transform: translateY(-10px); /* Moving text up by 10px on hover */
 }
 
 @media screen and (max-width: 1183px) {

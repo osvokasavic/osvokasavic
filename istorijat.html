@@ -6,13 +6,16 @@
     <title>ОШ "Војислав Вока Савић" Историјат</title>
     <!-- Увести css -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="/lightbox/lightbox.css">
     <style>
         #istorijat {
             background-color: firebrick;
         }
         .vokasavic {
             justify-content: center;
+            display: flex;
+        }
+        .slika2 {
+            justify-content: left;
             display: flex;
         }
     </style>
@@ -34,11 +37,9 @@
         <p>По томе је јединствен пример у свету да заједно буду сахрањени и браниоци и нападачи.</p>
         <p>    У близини наше школе су и две средње школе: <b>Гимназија</b> и <b>ТШ „Колубара“</b>. Уз саму школу,у делу некадашњег школског дворишта је  хала <b>СЦ „Лазаревац“</b> једна од најлепших у Србији. Наши ученици користе  једну од сала за наставу физичког васпитања.</p>
         <p>    Школа има добру сарадњу са <b>РЕИК „Колубарa“</b>, <b>Центром за културу</b>, градском библиотеком <b>„Димитрије Туцовић“</b>, <b>Спортским центром</b>, Домом здравља <b>„Др Ђорђе Ковачевић“</b> и саобраћајним предузећем <b>„Ластра“</b>.</p>
-        <div class="vokasavic">
             <img src="/slike/image002.png" style="width:263px;height:176px;">
-            <img src="/slike/VojislavVokaSavic.png" alt="Вока Савић" style="height:292px;width:198px;">
-            <img src="/slike/image004.png" style="width:252px;height:178px;">
-        </div>
+            <div class="vokasavic"><img src="/slike/VojislavVokaSavic.png" alt="Вока Савић" style="height:292px;width:198px;"></div>
+            <div class="slika2"><img src="/slike/image004.png" style="width:252px;height:178px;"></div>
         <div class="cn-line">
             <div class="line"></div>
             <div class="pglv"><b>ВОЈИСЛАВ ВОКА САВИЋ – Биографија</b> </div>
@@ -53,7 +54,6 @@
         <p></p>
     </footer>
 <script src="script.js"></script>
-<script src="/lightbox/lightbox.js"></script>
 <script>
     fetch('navigation.html')
         .then(response => response.text())

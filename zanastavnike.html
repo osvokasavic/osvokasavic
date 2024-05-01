@@ -1,0 +1,31 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОШ "Војислав Вока Савић"</title>
+    <!-- Увести css -->
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+	#zanastavnike {
+	    background-color: #cccccc;
+	}
+	#aktivnosti {
+	    background-color: firebrick;
+	}
+    </style>
+</head>
+<body>
+    <header>
+        <div id="nav-placeholder"></div>
+
+        <div class="centar">
+            <h1><b>За наставнике</b></h1>
+        </div>
+    </header>
+</body>
+<script src="script.js"></script>
+<script>
+    fetch('navigation.html')
+	.then(response => response.text())
+	.then(data => document.getElementById('nav-placeholder').innerHTML = data);
+</script>
+</html>

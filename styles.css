@@ -15,6 +15,20 @@ img:hover {
   border-radius: 6px;
 }
 
+.img-container {
+  display:flex;
+  flex-wrap: wrap;
+}
+.img-container img {
+  width: 50%; /* Each image takes half of the container's width */
+  height: auto; /* Maintain aspect ratio */
+}
+@media (max-width: 768px) {
+  .img-container img {
+    width: 100%; /* On smaller screens, each image takes full width */
+  }
+}
+
 @media screen and (max-width: 1183px) {
   body {
     margin-top:100px;

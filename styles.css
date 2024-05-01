@@ -20,6 +20,11 @@ img:hover {
   flex-wrap: wrap;
 }
 
+.navbar a, .dropbtn, .dropdown {
+  transition: background-color 0.3s ease; 
+  border-radius: 3px;
+}
+
 @media screen and (max-width: 1183px) {
   body {
     margin-top:100px;

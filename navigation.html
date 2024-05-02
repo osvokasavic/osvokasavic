@@ -66,7 +66,7 @@
         <a href="/zaposleni.html">Запослени</a>
         <a href="/galerija.html">Галерија</a>
         <div class="overlaydropdown">
-            <button class="overlaydropbtn">Активности
+            <button class="overlaydropbtn" onclick="toggleDropdown(1)">Активности
                 <i class="fas fa-caret-up"></i>
             </button>
             <div class="overlaydropdown-content">
@@ -74,21 +74,21 @@
                 <a href="/ekskurzije.html">Екскурзије</a>
                 <a href="/sekcije.html">Секције</a>
                 <a href="/zanastavnike.html">За Наставнике</a>
-                <a href="#" class="close-btn">Затвори</a>
+                <a href="#" class="close-btn" onclick="closeDropdown(1)">Затвори</a>
             </div>
         </div>
         <div class="overlaydropdown">
-            <button class="overlaydropbtn">Стручно особље
+            <button class="overlaydropbtn" onclick="toggleDropdown(2)">Стручно особље
                 <i class="fas fa-caret-up"></i>
             </button>
             <div class="overlaydropdown-content">
                 <a href="/psiholog.html">Психолог и педагог</a>
                 <a href="/biblioteka.html">Библиотека</a>
-                <a href="#" class="close-btn">Затвори</a>
+                <a href="#" class="close-btn" onclick="closeDropdown(2)">Затвори</a>
             </div>
         </div>
         <div class="overlaydropdown">
-            <button class="overlaydropbtn">Ђачка страна
+            <button class="overlaydropbtn" onclick="toggleDropdown(3)">Ђачка страна
                 <i class="fas fa-caret-up"></i>
             </button>
             <div class="overlaydropdown-content">
@@ -96,7 +96,7 @@
                 <a href="/zavrsni.html">Завршни испит</a>
                 <a href="/kalendar.html">Школски календар</a>
                 <a href="/razno.html">Разно...</a>
-                <a href="#" class="close-btn">Затвори</a>
+                <a href="#" class="close-btn" onclick="closeDropdown(3)">Затвори</a>
             </div>
         </div>
         <a href="/kontakt.html">Контакт</a>

@@ -25,6 +25,10 @@ img:hover {
   border-radius: 3px;
 }
 
+.dropdown.show .dropdown-content {
+  display: block;
+}
+
 @media screen and (max-width: 1183px) {
   body {
     margin-top:100px;

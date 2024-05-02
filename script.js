@@ -62,10 +62,27 @@ function toggleNav() {
     overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
 
-function molibedrpdwn(dropdownContent) {
-    if (dropdownContent.style.display === 'none') {
-        dropdownContent.style.display = 'block';
-    } else {
-        dropdownContent.style.display = 'none';
-    }
-}
+document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+    dropdown.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent click event from propagating to document
+        document.querySelectorAll('.dropdown').forEach(function(d) {
+            if (d !== dropdown) {
+                d.classList.remove('show');
+            }
+        });
+        dropdown.classList.toggle('show');
+    });
+
+    // Close dropdown when close button is clicked
+    dropdown.querySelector('.close-btn').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent dropdown from closing when close button is clicked
+        dropdown.classList.remove('show');
+    });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function() {
+    document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+        dropdown.classList.remove('show');
+    });
+});

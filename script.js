@@ -62,6 +62,6 @@ function toggleNav() {
     overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
 
-function showDropdown(targetId) {
+function mobiledrpdwn(targetId) {
     document.querySelector('.dropdown-content').classList.add('show');
 }

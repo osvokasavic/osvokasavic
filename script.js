@@ -62,6 +62,10 @@ function toggleNav() {
     overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
 
-function mobiledrpdwn(targetId) {
-    document.querySelector('.dropdown-content').classList.add('show');
+function molibedrpdwn(dropdownContent) {
+    if (dropdownContent.style.display === 'none') {
+        dropdownContent.style.display = 'block';
+    } else {
+        dropdownContent.style.display = 'none';
+    }
 }

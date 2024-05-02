@@ -29,6 +29,11 @@ img:hover {
   display: block;
 }
 
+.close-btn {
+  color: red;
+  text-align: center;
+}
+
 @media screen and (max-width: 1183px) {
   body {
     margin-top:100px;

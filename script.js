@@ -62,6 +62,7 @@ function toggleNav() {
     overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
 
+// Toggle dropdown menu visibility for each dropdown
 document.querySelectorAll('.overlaydropdown').forEach(function(dropdown) {
     dropdown.addEventListener('click', function(event) {
         event.stopPropagation(); // Prevent click event from propagating to document

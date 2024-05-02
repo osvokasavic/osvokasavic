@@ -61,3 +61,7 @@ function toggleNav() {
     var overlay = document.getElementById('overlay');
     overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
+
+function showDropdown(targetId) {
+    document.querySelector('.dropdown-content').classList.add('show');
+}

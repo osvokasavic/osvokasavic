@@ -25,7 +25,7 @@ img:hover {
   border-radius: 3px;
 }
 
-.dropdown.show .dropdown-content {
+.overlaydropdown.show .overlaydropdown-content {
   display: block;
 }
 
@@ -345,10 +345,6 @@ h4 {
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.overlaydropdown:hover .overlaydropdown-content {
   display: block;
 }
 

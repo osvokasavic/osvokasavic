@@ -66,18 +66,22 @@ function toggleNav() {
 document.querySelectorAll('.overlaydropdown').forEach(function(dropdown) {
     dropdown.addEventListener('click', function(event) {
         event.stopPropagation(); // Prevent click event from propagating to document
+        console.log("Dropdown clicked");
         document.querySelectorAll('.overlaydropdown').forEach(function(d) {
             if (d !== dropdown) {
                 d.classList.remove('show');
+                console.log("Hiding dropdown");
             }
         });
         dropdown.classList.toggle('show');
+        console.log("Toggling dropdown visibility");
     });
 
     // Close dropdown when close button is clicked
     dropdown.querySelector('.close-btn').addEventListener('click', function(event) {
         event.stopPropagation(); // Prevent dropdown from closing when close button is clicked
         dropdown.classList.remove('show');
+        console.log("Closing dropdown");
     });
 });
 
@@ -85,5 +89,7 @@ document.querySelectorAll('.overlaydropdown').forEach(function(dropdown) {
 document.addEventListener('click', function() {
     document.querySelectorAll('.overlaydropdown').forEach(function(dropdown) {
         dropdown.classList.remove('show');
+        console.log("Closing dropdown when clicking outside");
     });
 });
+

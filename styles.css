@@ -25,10 +25,6 @@ img:hover {
   border-radius: 3px;
 }
 
-.overlaydropdown.show .overlaydropdown-content {
-  display: block;
-}
-
 .close-btn {
   color: red;
   text-align: center;
@@ -454,4 +450,8 @@ h4 {
 }
 .overlay-content a:hover {
   background-color: red;
+}
+
+.overlaydropdown.show .overlaydropdown-content {
+  display: block;
 }

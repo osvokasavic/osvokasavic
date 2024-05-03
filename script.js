@@ -62,6 +62,11 @@ function toggleNav() {
     overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
 
+function closeDropdown(dropdownId) {
+    var dropdown = document.getElementById("dropdown" + dropdownId);
+    dropdown.style.display = "none";
+}
+
 function toggleDropdown(dropdownId) {
     var dropdown = document.getElementById("dropdown" + dropdownId);
     if (dropdown.style.display === "block") {
@@ -71,7 +76,3 @@ function toggleDropdown(dropdownId) {
     }
 }
 
-function closeDropdown(dropdownId) {
-    var dropdown = document.getElementById("dropdown" + dropdownId);
-    dropdown.style.display = "none";
-}

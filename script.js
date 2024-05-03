@@ -67,6 +67,14 @@ function closeDropdown(dropdownId) {
     dropdown.style.display = "none";
 }
 
+document.addEventListener('click', function(event) {
+    // Check if the clicked element has the class "overlay"
+    if (!event.target.closest('.overlay')) {
+        // If it doesn't have the class, execute closeDropdown function
+        closeDropdown(dropdownId);
+    }
+});
+
 function toggleDropdown(dropdownId) {
     var dropdown = document.getElementById("dropdown" + dropdownId);
     if (dropdown.style.display === "block") {

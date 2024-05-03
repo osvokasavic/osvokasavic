@@ -475,3 +475,9 @@ h4 {
 .overlay-content a:hover {
   background-color: red;
 }
+
+@media screen and (max-height: 540px) {
+  .overlay-content {
+    top: 50%;
+  }
+}

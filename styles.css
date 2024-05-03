@@ -25,14 +25,19 @@ img:hover {
   border-radius: 3px;
 }
 
-.overlay-content a, .overlaydropbtn, .overlaydropdown {
+.overlay-content {
+  background-color: #555;
+}
+
+.overlay-content a:hover, .overlaydropdown:hover {
   transition: background-color 0.3s ease; 
   border-radius: 3px;
 }
 
 .close-btn {
-  color: red;
-  text-align: center;
+  color: orange !important;
+  font-weight: bolder;
+  text-align: center !important;
 }
 
 @media screen and (max-width: 1183px) {

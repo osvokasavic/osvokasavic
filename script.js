@@ -70,6 +70,13 @@ function closeDropdown(event, dropdownId) {
 
 
 function toggleDropdown(dropdownId) {
+    // Hide all dropdowns
+    var allDropdowns = document.querySelectorAll(".overlaydropdown-content");
+    allDropdowns.forEach(function(dropdown) {
+        dropdown.style.display = "none";
+    });
+
+    // Display the clicked dropdown
     var dropdown = document.getElementById("dropdown" + dropdownId);
     if (dropdown.style.display === "block") {
         dropdown.style.display = "none";
@@ -77,4 +84,3 @@ function toggleDropdown(dropdownId) {
         dropdown.style.display = "block";
     }
 }
-

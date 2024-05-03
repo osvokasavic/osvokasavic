@@ -25,6 +25,11 @@ img:hover {
   border-radius: 3px;
 }
 
+.overlay-content a, .overlaydropbtn, .overlaydropdown {
+  transition: background-color 0.3s ease; 
+  border-radius: 3px;
+}
+
 .close-btn {
   color: red;
   text-align: center;
@@ -120,6 +125,7 @@ h4 {
   height: 50px;
   cursor: pointer;
   animation: fadeIn 0.2s;
+  -webkit-animation: fadeIn 0.2s;
 }
 
 #scrollToTopBtn:hover {
@@ -183,6 +189,14 @@ h4 {
 @keyframes fadeIn {
     from { opacity: 0; }
       to { opacity: 1; }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Навигација */
@@ -303,6 +317,7 @@ h4 {
   z-index: 3;
   font-family: "Cuprum", sans-serif;
   animation: fadeIn 0.3s;
+  -webkit-animation: fadeIn 0.3s;
 }
 
 .overlaydropdown-content {
@@ -316,6 +331,7 @@ h4 {
   z-index: 3;
   font-family: "Cuprum", sans-serif;
   animation: fadeIn 0.3s;
+  -webkit-animation: fadeIn 0.3s;
 }
 /* Линкови у падајућем мениу */
 .dropdown-content a {
@@ -437,10 +453,11 @@ h4 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    webkit-animation: fadeIn 0.4s;
     animation: fadeIn 0.4s;
+    -webkit-animation: fadeIn 0.4s;
     z-index: 1000;
     font-family: "Cuprum", sans-serif;
+    border-radius: 3px;
 }
 .overlay-content a {
     display: block;

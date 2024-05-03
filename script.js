@@ -69,7 +69,7 @@ function closeDropdown(dropdownId) {
 
 document.addEventListener('click', function(event) {
     // Check if the clicked element has the class "overlay"
-    if (!event.target.closest('.overlay')) {
+    if (!event.target.closest('.overlay-content')) {
         // If it doesn't have the class, execute closeDropdown function
         closeDropdown([1, 2, 3]); // Pass an array of dropdown IDs
     }

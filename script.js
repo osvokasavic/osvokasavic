@@ -62,10 +62,12 @@ function toggleNav() {
     overlay.style.display = overlay.style.display === "block" ? "none" : "block";
 }
 
-function closeDropdown(dropdownId) {
+function closeDropdown(event, dropdownId) {
+    event.stopPropagation(); // Prevent event from bubbling up
     var dropdown = document.getElementById("dropdown" + dropdownId);
     dropdown.style.display = "none";
 }
+
 
 function toggleDropdown(dropdownId) {
     var dropdown = document.getElementById("dropdown" + dropdownId);

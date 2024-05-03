@@ -249,9 +249,9 @@ h4 {
 }
 
 .overlaydropdown {
-  overflow: hidden;
   font-faimily: "Roboto", sans-serif;
   font-weight: 400;
+  position: relative;
   font-size: 16px;
   border: none;
   outline: none;
@@ -261,6 +261,7 @@ h4 {
   font-family: inherit;
   margin: 0px;
 }
+
 
 .overlaydropdown:hover {
   background-color: red;
@@ -307,12 +308,13 @@ h4 {
 .overlaydropdown-content {
   display: none;
   position: absolute;
+  top: 0;
+  left:100%;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 3;
   font-family: "Cuprum", sans-serif;
-  webkit-animation: fadeIn 0.3s;
   animation: fadeIn 0.3s;
 }
 /* Линкови у падајућем мениу */

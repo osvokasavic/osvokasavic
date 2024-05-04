@@ -275,10 +275,13 @@ h4 {
   border: none;
   outline: none;
   color: white;
-  background-color: #555;
   padding: 10px;
   font-family: inherit;
   margin: 0px;
+  background-color: transparent;
+  -webkit-text-stroke: 2px rgba(0, 0, 255, 0.2); /* Apply a 2px wide semi-transparent blue stroke */
+  text-stroke: 2px rgba(0, 0, 255, 0.2); /* Apply a 2px wide semi-transparent blue */
+  font-size:1em;
 }
 
 
@@ -306,6 +309,8 @@ h4 {
   background-color: inherit;
   font-family: inherit;
   margin: 0px;
+  font-weight: bold;
+  font-size: inherit;
 }
 /* Црвена позадина линкова */
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -330,8 +335,8 @@ h4 {
   position: absolute;
   top: 0;
   left:100%;
-  background-color: #f9f9f9;
-  min-width: 160px;
+  background-color:rgba(0,0,0,0.2);
+  min-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 3;
   font-family: "Cuprum", sans-serif;
@@ -445,10 +450,10 @@ h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 255, 0.1);
     backdrop-filter: blur(3px); /* apply blur effect */
     -webkit-backdrop-filter: blur(3px); /* for Safari */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    box-shadow: 0px 0px 10px rgba(0, 0, 255, 1); /* Shadow effect */
     display: none;
     z-index: 999;
 }
@@ -463,21 +468,44 @@ h4 {
     z-index: 1000;
     font-family: "Cuprum", sans-serif;
     border-radius: 3px;
+    background-color:rgba(0,0,0,0.1);
+    font-size:1em;
+    font-weight:bolder;
 }
 .overlay-content a {
     display: block;
     color: #fff;
-    background-color: #555;
     height: inherit;
     padding: 10px 16px;
     text-decoration: none;
+    background-color: transparent;
+    -webkit-text-stroke: 2px rgba(0, 0, 255, 0.2); /* Apply a 2px wide semi-transparent blue stroke */
+    text-stroke: 2px rgba(0, 0, 255, 0.2); /* Apply a 2px wide semi-transparent blue */
 }
 .overlay-content a:hover {
   background-color: red;
 }
 
-@media screen and (min-width: 370px) {
+@media screen and (min-width: 340px) {
   .overlay-content {
     left: 40%;
+  }
+}
+
+@media screen and (max-height: 485px) {
+  .overlay-content {
+    font-size: 0.9em;
+  }
+}
+}
+
+@media screen and (min-width: 340px) {
+  .overlay-content {
+    left: 40%;
+  }
+}
+@media screen and (max-height: 485px) {
+  .overlay-content {
+    font-size: 0.9em;
   }
 }

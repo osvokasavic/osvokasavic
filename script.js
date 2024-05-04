@@ -59,14 +59,25 @@ function smoothScroll(targetId) {
 
 function toggleNav() {
     var overlay = document.getElementById('overlay');
+    
+    // Toggle the display style of the overlay
     overlay.style.display = overlay.style.display === "block" ? "none" : "block";
+    
+    // Check if overlay is displayed
+    if (overlay.style.display === "block") {
+        // If overlay is displayed, disable scrolling
+        document.body.style.overflow = 'hidden';
+    } else {
+        // If overlay is not displayed, enable scrolling
+        document.body.style.overflow = 'auto';
+    }
 }
+
 
 function closeDropdown(event, dropdownId) {
     event.stopPropagation(); // Prevent event from bubbling up
     var dropdown = document.getElementById("dropdown" + dropdownId);
     dropdown.style.display = "none";
-    document.documentElement.style.overflowY = 'auto';
 }
 
 
@@ -75,7 +86,6 @@ function toggleDropdown(dropdownId) {
     var allDropdowns = document.querySelectorAll(".overlaydropdown-content");
     allDropdowns.forEach(function(dropdown) {
         dropdown.style.display = "none";
-        document.documentElement.style.overflowY = 'hidden';
     });
 
     // Display the clicked dropdown

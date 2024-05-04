@@ -66,6 +66,7 @@ function closeDropdown(event, dropdownId) {
     event.stopPropagation(); // Prevent event from bubbling up
     var dropdown = document.getElementById("dropdown" + dropdownId);
     dropdown.style.display = "none";
+    document.documentElement.style.overflowY = 'auto';
 }
 
 
@@ -74,6 +75,7 @@ function toggleDropdown(dropdownId) {
     var allDropdowns = document.querySelectorAll(".overlaydropdown-content");
     allDropdowns.forEach(function(dropdown) {
         dropdown.style.display = "none";
+        document.documentElement.style.overflowY = 'hidden';
     });
 
     // Display the clicked dropdown

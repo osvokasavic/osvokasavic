@@ -37,7 +37,11 @@ img:hover {
 .close-btn {
   color: orange !important;
   font-weight: bolder;
+  background-color: rgba(0,0,0,0.4) !important;
   text-align: center !important;
+}
+.close-btn:hover {
+  background-color: rgba(255,0,0,0.5) !important;
 }
 
 @media screen and (max-width: 1183px) {
@@ -286,7 +290,7 @@ h4 {
 
 
 .overlaydropdown:hover {
-  background-color: red;
+  background-color: rgba(255,0,0,0.5)
 }
 
 /* Дугме за падајући мени */
@@ -306,11 +310,12 @@ h4 {
   border: none;
   outline: none;
   color: white;
-  background-color: inherit;
+  background-color: transparent;
   font-family: inherit;
   margin: 0px;
   font-weight: bold;
   font-size: inherit;
+  transition: background-color 0.3s ease;
 }
 /* Црвена позадина линкова */
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -483,7 +488,7 @@ h4 {
     text-stroke: 2px rgba(0, 0, 255, 0.2); /* Apply a 2px wide semi-transparent blue */
 }
 .overlay-content a:hover {
-  background-color: red;
+  background-color: rgba(255,0,0,0.5)
 }
 
 @media screen and (min-width: 340px) {

@@ -10,8 +10,10 @@ function scrollFunction() {
     if (scrollToTopBtn) {
         if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
             scrollToTopBtn.style.opacity = "1";
+            scrollToTopBtn.style.pointerEvents = "auto";
         } else {
             scrollToTopBtn.style.opacity = "0";
+            scrollToTopBtn.style.pointerEvents = "none";
         }
     }
 }

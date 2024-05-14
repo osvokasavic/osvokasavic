@@ -269,6 +269,7 @@ h4 {
   overflow: hidden;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  padding-bottom:1px;
 }
 
 .overlaydropdown {

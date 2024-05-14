@@ -9,9 +9,9 @@ function scrollFunction() {
     // If scrollToTopBtn exists, proceed with the scroll functionality
     if (scrollToTopBtn) {
         if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-            scrollToTopBtn.style.display = "block";
+            scrollToTopBtn.style.opacity = "1";
         } else {
-            scrollToTopBtn.style.display = "none";
+            scrollToTopBtn.style.opacity = "0";
         }
     }
 }

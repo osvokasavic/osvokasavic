@@ -192,6 +192,7 @@
   </style>
 </head>
 <body>
+  <div id="nav-placeholder"></div>
   <section>
     <div class="container">
       <div class="text">
@@ -332,6 +333,10 @@
                 }
             });
         });
+
+    fetch('navigation.html')
+	.then(response => response.text())
+	.then(data => document.getElementById('nav-placeholder').innerHTML = data);
   </script>
 </body>
 </html>

@@ -51,37 +51,31 @@ img:hover {
     }
   }
 }
-
-@supports (background-image: url('/slike/baner_skola.webp')) {
-  /* Media query for screens less than 600px */
-  @media (max-width: 600px) {
-    .banner-container {
-       background-image: url('/slike/baner_skola_f.webp');
-    }
+@media (max-width: 600px) {
+  .banner-container {
+     background-image: url('/slike/baner_skola_f.webp');
   }
+}
 
-  /* Media query for screens larger than 600px */
-  @media (min-width: 601px) {
-    .banner-container {
-      background-image: url('/slike/baner_skola.webp');
-    }
+/* Media query for screens larger than 600px */
+@media (min-width: 601px) {
+  .banner-container {
+    background-image: url('/slike/baner_skola.webp');
   }
 }
 
 /* Fallback for browsers that don't support WebP */
-@supports not (background-image: url('/slike/baner_skola.webp')) {
   /* Media query for screens less than 600px */
-  @media (max-width: 600px) {
-    .banner-container {
-      background-image: url('/slike/baner_skola_f.jpg');
-    }
+@media (max-width: 600px) {
+  .banner-container .no-webp {
+    background-image: url('/slike/baner_skola_f.jpg');
   }
+}
 
-  /* Media query for screens larger than 600px */
-  @media (min-width: 601px) {
-    .banner-container {
-      background-image: url('/slike/baner_skola.jpg');
-    }
+/* Media query for screens larger than 600px */
+@media (min-width: 601px) {
+  .banner-container .no-webp {
+    background-image: url('/slike/baner_skola.jpg');
   }
 }
 

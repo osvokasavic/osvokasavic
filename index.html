@@ -67,7 +67,7 @@
 
 function testWebPSupport() {
   return new Promise((resolve) => {
-    const webp = "data:image/webp;base64,UklGRiIAAABXRUJQVlA4TAAAAABQAAAAQUxQSAwAAAAQAAAA";
+    const webp = "data:image/webp;base64,UklGRkAAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAIAAAAAAFZQOCAYAAAAMAEAnQEqAQABAAFAJiWkAANwAP79NmgA";
     const img = new Image();
     img.onload = () => resolve(true);
     img.onerror = () => resolve(false);

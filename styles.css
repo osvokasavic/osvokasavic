@@ -41,7 +41,7 @@ img:hover {
   background-color: rgba(255,0,0,0.5) !important;
 }
 
-@media screen and (max-width: 1183px) {
+@media screen and (max-width: 1224px) {
   body {
     margin-top:100px;
   }

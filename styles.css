@@ -67,14 +67,14 @@ img:hover {
 /* Fallback for browsers that don't support WebP */
   /* Media query for screens less than 600px */
 @media (max-width: 600px) {
-  .banner-container .no-webp {
+  .no-webp .banner-container {
     background-image: url('/slike/baner_skola_f.jpg');
   }
 }
 
 /* Media query for screens larger than 600px */
 @media (min-width: 601px) {
-  .banner-container .no-webp {
+  .no-webp .banner-container {
     background-image: url('/slike/baner_skola.jpg');
   }
 }

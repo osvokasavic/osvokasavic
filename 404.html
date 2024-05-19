@@ -230,16 +230,19 @@
     }
 
     function display(result) {
-      if (result.length) {
-        const content = result.map((list) => {
-          const href = list.href;
-          return `<li><a href="${href}">${list.text}</a></li>`;
-        });
-        resultsBox.innerHTML = `<ul>${content.join('')}</ul>`;
-      } else {
-        resultsBox.innerHTML = '';
-      }
+  setTimeout(() => {
+    if (result.length) {
+      const content = result.map((list) => {
+        const href = list.href;
+        return `<li><a href="${href}">${list.text}</a></li>`;
+      });
+      resultsBox.innerHTML = `<ul>${content.join('')}</ul>`;
+    } else {
+      resultsBox.innerHTML = '';
     }
+  }, 50);
+}
+
   </script>
 </body>
 </html>

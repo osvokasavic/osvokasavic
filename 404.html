@@ -1,3 +1,6 @@
+when i try to press one of the results, it doesnt to anything. Why?
+<!DOCTYPE html>
+<html lang="en">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -240,14 +243,6 @@
         resultsBox.innerHTML = '';
       }
     }
-
-    document.addEventListener('click', function(e) {
-      const target = e.target;
-      if (target.tagName === 'A' && target.closest('.result-box')) {
-        e.preventDefault();
-        window.location.href = target.href;
-      }
-    });
   </script>
 </body>
 </html>

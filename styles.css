@@ -20,6 +20,7 @@ img:hover {
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
+  border: 1px solid #32CD32;
 }
 
 .navbar a, .dropbtn, .dropdown {

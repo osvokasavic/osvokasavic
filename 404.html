@@ -235,19 +235,16 @@
           const href = list.href;
           return `<li><a href="${href}">${list.text}</a></li>`;
         });
-        console.log('Generated HTML:', content.join(''));
         resultsBox.innerHTML = `<ul>${content.join('')}</ul>`;
       } else {
         resultsBox.innerHTML = '';
       }
     }
 
-    // Adding event listener to handle clicks explicitly
-    resultsBox.addEventListener('click', function(e) {
+    document.addEventListener('click', function(e) {
       const target = e.target;
-      if (target.tagName === 'A') {
+      if (target.tagName === 'A' && target.closest('.result-box')) {
         e.preventDefault();
-        console.log('Navigating to:', target.href);
         window.location.href = target.href;
       }
     });

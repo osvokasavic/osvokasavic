@@ -242,9 +242,14 @@
       }
     }
 
-    // Adding event listener to log clicks
+    // Adding event listener to handle clicks explicitly
     resultsBox.addEventListener('click', function(e) {
-      console.log('Clicked:', e.target);
+      const target = e.target;
+      if (target.tagName === 'A') {
+        e.preventDefault();
+        console.log('Navigating to:', target.href);
+        window.location.href = target.href;
+      }
     });
   </script>
 </body>

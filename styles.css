@@ -19,6 +19,7 @@ img:hover {
 .img-container {
   display:flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .navbar a, .dropbtn, .dropdown {

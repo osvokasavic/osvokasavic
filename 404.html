@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -237,11 +235,17 @@
           const href = list.href;
           return `<li><a href="${href}">${list.text}</a></li>`;
         });
+        console.log('Generated HTML:', content.join(''));
         resultsBox.innerHTML = `<ul>${content.join('')}</ul>`;
       } else {
         resultsBox.innerHTML = '';
       }
     }
+
+    // Adding event listener to log clicks
+    resultsBox.addEventListener('click', function(e) {
+      console.log('Clicked:', e.target);
+    });
   </script>
 </body>
 </html>

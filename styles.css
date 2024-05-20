@@ -38,6 +38,7 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
 
 .close-btn {
   color: orange !important;

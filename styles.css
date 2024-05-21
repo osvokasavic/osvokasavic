@@ -283,8 +283,6 @@ h4 {
   font-family: inherit;
   margin: 0px;
   background-color: transparent;
-  -webkit-text-stroke: 2px rgba(0, 0, 255, 0.2); /* Apply a 2px wide semi-transparent blue stroke */
-  text-stroke: 2px rgba(0, 0, 255, 0.2); /* Apply a 2px wide semi-transparent blue */
   font-size:1em;
 }
 
@@ -316,6 +314,11 @@ h4 {
   font-weight: bold;
   font-size: inherit;
   transition: background-color 0.3s ease;
+  text-shadow: 
+                -1px -1px 0 #000,  
+                 1px -1px 0 #000,
+                -1px  1px 0 #000,
+                 1px  1px 0 #000;
 }
 /* Црвена позадина линкова */
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -476,6 +479,11 @@ h4 {
     background-color:transparent;
     font-size:1em;
     font-weight:bolder;
+    text-shadow: 
+      -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px  1px 0 #000,
+      1px  1px 0 #000;
 }
 .overlay-content a {
     display: block;
@@ -484,8 +492,6 @@ h4 {
     padding: 10px 16px;
     text-decoration: none;
     background-color: transparent;
-    -webkit-text-stroke: 2px rgba(0, 0, 255, 0.2); /* Apply a 2px wide semi-transparent blue stroke */
-    text-stroke: 2px rgba(0, 0, 255, 0.2); /* Apply a 2px wide semi-transparent blue */
 }
 .overlay-content a:hover {
   background-color: rgba(255,0,0,0.5)

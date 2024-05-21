@@ -1,1 +1,111 @@
-dsddsadsad
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ОШ "Војислав Вока Савић"</title>
+    <!-- Увести css -->
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+      	#arhiva {
+      	    background-color: firebrick;
+      	}
+      body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .options, .sub-options {
+            margin-top: 20px;
+        }
+        .sub-options {
+            display: none;
+        }
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .calendar-item {
+            padding: 10px;
+            background-color: #f0f0f0;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .calendar-item:hover {
+            background-color: #d0d0d0;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="nav-placeholder"></div>
+        <div class="centar">
+            <h1><b>Архива</b></h1>
+        </div>
+      <div class="options">
+        <select onchange="showSubOptions(this.value)">
+            <option value="pocetna" selected>Почетна</option>
+            <option value="tak">Такмичења</option>
+        </select>
+    </div>
+
+    <div id="sub-options-pocetna" class="sub-options">
+        <h2>Почетна</h2>
+        <div class="calendar">
+            <div class="calendar-item">2013/2014</div>
+            <div class="calendar-item">2014/2015</div>
+            <div class="calendar-item">2015/2016</div>
+            <div class="calendar-item">2016/2017</div>
+            <div class="calendar-item">2017/2018</div>
+            <div class="calendar-item">2018/2019</div>
+            <div class="calendar-item">2019/2020</div>
+            <div class="calendar-item">2020/2021</div>
+            <div class="calendar-item">2021/2022</div>
+            <div class="calendar-item">2022/2023</div>
+        </div>
+    </div>
+
+    <div id="sub-options-tak" class="sub-options">
+        <h2>Такмичења</h2>
+        <div class="calendar">
+            <div class="calendar-item">2013/2014</div>
+            <div class="calendar-item">2014/2015</div>
+            <div class="calendar-item">2015/2016</div>
+            <div class="calendar-item">2016/2017</div>
+            <div class="calendar-item">2017/2018</div>
+            <div class="calendar-item">2018/2019</div>
+            <div class="calendar-item">2019/2020</div>
+            <div class="calendar-item">2020/2021</div>
+            <div class="calendar-item">2021/2022</div>
+            <div class="calendar-item">2022/2023</div>
+        </div>
+    </div>
+    </header>
+</body>
+<script src="../script.js"></script>
+<script>
+  fetch('../navigation.html')
+	.then(response => response.text())
+	.then(data => document.getElementById('nav-placeholder').innerHTML = data);
+  function showSubOptions(option) {
+            document.getElementById('sub-options-pocetna').style.display = 'none';
+            document.getElementById('sub-options-tak').style.display = 'none';
+
+            if (option === 'pocetna') {
+                document.getElementById('sub-options-pocetna').style.display = 'block';
+            } else if (option === 'tak') {
+                document.getElementById('sub-options-tak').style.display = 'block';
+            }
+        }
+</script>
+</html>

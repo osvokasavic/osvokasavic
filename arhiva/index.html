@@ -10,10 +10,6 @@
       	#arhiva {
       	    background-color: firebrick;
       	}
-      body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
         .options, .sub-options {
             margin-top: 20px;
         }
@@ -98,7 +94,7 @@
 	.then(response => response.text())
 	.then(data => document.getElementById('nav-placeholder').innerHTML = data);
 
-	  function showSubOptions(option) {
+	 function showSubOptions(option) {
             document.getElementById('sub-options-pocetna').style.display = 'none';
             document.getElementById('sub-options-tak').style.display = 'none';
 
@@ -108,5 +104,10 @@
                 document.getElementById('sub-options-tak').style.display = 'block';
             }
         }
+
+        // Show default sub-options on page load
+        window.onload = function() {
+            showSubOptions('pocetna');
+        };
 </script>
 </html>

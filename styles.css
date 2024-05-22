@@ -337,7 +337,7 @@ h4 {
                  1px  1px 0 #000;
 }
 /* Црвена позадина линкова */
-.navbar a:hover, .dropdown:hover .dropbtn, .navbar a:focus {
+.navbar a:hover, .dropdown:hover .dropbtn, .navbar a:focus, .dropdown:focus .dropbtn {
   background-color: red !important;
 }
 
@@ -392,7 +392,7 @@ h4 {
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content, .dropdown:focus {
+.dropdown:hover .dropdown-content, .dropdown:focus .dropdown-content {
   display: block;
 }
 

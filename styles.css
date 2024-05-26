@@ -472,6 +472,7 @@ h4 {
 
 .overlay-content {
   position: fixed;
+  top:50px;
   left:100% !important; 
   transform: translateX(-100%);
   background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));

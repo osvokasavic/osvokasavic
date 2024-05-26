@@ -62,11 +62,11 @@
         var pocetna = document.getElementById('pocetna');
         if (window.pageYOffset == 0) {
             navbar.style.backgroundColor = 'transparent';
-            navbar.style.backdropFilter = 'blur(30px)';
+            navbar.style.boxShadow = '0px 0px 30px rgba(227, 228, 237, 0.37)';
             pocetna.style.backgroundColor = 'rgba(255,0,0,0.3)'
         } else {
             navbar.style.backgroundColor = 'black';
-            navbar.style.backdropFilter = '';
+            navbar.style.boxShadow = '';
             pocetna.style.backgroundColor = 'red';
         }
     }

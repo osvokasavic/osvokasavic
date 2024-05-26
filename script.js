@@ -61,7 +61,7 @@ function smoothScroll(targetId) {
 
 function toggleNav() {
     var overlay = document.getElementById('overlay');
-    var box = document.getElementById('box')
+    var box = document.document.querySelector('.box')
     // Toggle the display style of the overlay
     overlay.style.display = overlay.style.display === "block" ? "none" : "block";
     

@@ -420,13 +420,14 @@ h4 {
   .navbar {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+    max-height: 48px;
   }
 @media screen and (max-width: 600px) {
   .navbar.responsive {position: relative;}
   .navbar.responsive .icon {
     position: absolute;
     right: 0;
-    top: 0;
+    top: -6px;
   }
 
   .navbar.responsive a {

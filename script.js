@@ -61,6 +61,7 @@ function smoothScroll(targetId) {
 
 function toggleNav() {
     var overlay = document.getElementById('overlay');
+    var menuButton = document.getElementById('menu-button');
     var box = document.querySelector('.box')
     // Toggle the display style of the overlay
     overlay.style.display = overlay.style.display === "block" ? "none" : "block";
@@ -70,10 +71,12 @@ function toggleNav() {
         // If overlay is displayed, disable scrolling
         document.body.style.overflow = 'hidden';
         box.style.display = "block";
+        menuButton.classList.remove('active');
     } else {
         // If overlay is not displayed, enable scrolling
         document.body.style.overflow = 'auto';
         box.style.display = "none";
+        menuButton.classList.add('active');
     }
 }
 

@@ -60,22 +60,23 @@
     function adjustNavbarBackground() {
         var navbar = document.getElementById('navbar');
         if (window.pageYOffset == 0) {
+            navbar.style.backgroundColor = 'none';
             navbar.style.backdropFilter = 'blur(30px)';
             navbar.style.boxShadow = '0px 0px 30px rgba(227, 228, 237, 0.37)';
             navbar.style.border = '2px solid rgba(255, 255, 255, 0.18)';
         } else {
+            navbar.style.backgroundColor = 'black';
             navbar.style.backdropFilter = '';
             navbar.style.boxShadow = '';
             navbar.style.border = '';
         }
     }
-    
-    window.addEventListener('scroll', function() {
-        adjustNavbarBackground();
-    });
-    
-    setTimeout(adjustNavbarBackground, 500);
 
+window.addEventListener('scroll', function() {
+    adjustNavbarBackground();
+});
+
+setTimeout(adjustNavbarBackground, 500);
     
     fetch('navigation.html')
         .then(response => response.text())

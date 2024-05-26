@@ -280,6 +280,7 @@ h4 {
   padding: 14px 16px;
   text-decoration: none;
   z-index: 31;
+  position:relative;
 }
 
 /* Падајући линкови */
@@ -320,6 +321,7 @@ h4 {
   background-color: inherit;
   font-family: inherit;
   margin: 0px;
+  position:relative;
 }
 
 .overlaydropbtn {
@@ -340,9 +342,6 @@ h4 {
                  1px  1px 0 #000;
 }
 /* Црвена позадина линкова */
-.navbar a:hover, .dropdown:hover .dropbtn, .navbar a:focus, .dropdown:focus .dropbtn {
-  background-color: red !important;
-}
 
 /* Падајући мени */
 .dropdown-content {
@@ -541,3 +540,18 @@ h4 {
     }
   }
 }
+.navbar a::after, .dropbtn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    cursor:pointer;
+    height: 4px;
+    background: #369;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  .navbar a:hover::after, .dropbtn:hover::after, .navbar a:focus::after, .dropbtn:focus::after {
+    width: 100%;
+    left: 0;
+  }

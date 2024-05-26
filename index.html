@@ -59,10 +59,13 @@
 <script>
     function adjustNavbarBackground() {
         var navbar = document.getElementById('navbar');
+        var pocetna = document.getElementById('pocetna');
         if (window.pageYOffset == 0) {
             navbar.style.backgroundColor = 'transparent';
+            pocetna.style.backgroundColor = 'rgba(255,0,0,0.3)'
         } else {
             navbar.style.backgroundColor = 'black';
+            pocetna.style.backgroundColor = 'red';
         }
     }
 

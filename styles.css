@@ -497,12 +497,6 @@ h4 {
     left: 40%;
   }
 }
-
-@media screen and (max-height: 540px) {
-  .overlay-content {
-    position: fixed;
-    top: 200px;
-  }
   @media screen and (max-height: 485px) {
     .overlay-content {
       font-size: 0.9em;

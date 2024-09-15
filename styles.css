@@ -506,7 +506,7 @@ h4 {
       top: 0;
     }
   }
-}
+
 .navbar a::after, .dropbtn::after {
     content: '';
     position: absolute;
